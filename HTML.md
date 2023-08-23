@@ -1,5 +1,8 @@
 ## Exemplos de Tags Textuais
 
+### Títulos
+Em HTML, os títulos são marcados com as tags <h1> até <h6>, onde <h1> é o título mais importante e <h6> é o menos importante. No Markdown, você pode usar a sintaxe de hashtags (#) para criar títulos:
+
 ```html
 <!DOCTYPE html>
 <html lang="en">
