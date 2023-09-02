@@ -1,167 +1,432 @@
-## Exemplos de Tags Textuais
+## Anotações da aula de HTML
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Nome do Site</title>
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="../000-Exercícios/assets/rocket.gif">
-</head> 
-
-<body>
-    <!-- Exemplos de Títulos -->
-    <h1 id="titulo1">Titulo h1</h1>
-    <h2>Titulo h2</h2>
-    <h3 id="titulo3">Titulo h3</h3>
-    <h4>Titulo h4</h4>
-    <h5>Titulo h5</h5>
-    <h6>Titulo h6</h6>
-	    
-    <!-- Exemplos de parágrafos -->
-    <p>Isso é um parágrafo....</p>
-    <p>Lorem <b>ipsum,</b> dolor sit amet <br> consectetur adipisicing elit. Qui deleniti architecto, distinctio ducimus aliquam nemo delectus sapiente minima modi. Quasi, soluta nihil voluptate distinctio sit doloremque! Obcaecati culpa aliquid illo?</p>
-
-    <!-- Formatação em HTML -->
-    <p><b>Negrito</b></p>  
-    <p><strong>Enfase</strong></p>
-    <p><i>Italico</i></p>
-    <p><em>Enfatizado</em></p>
-    <p><mark>Grifado</mark></p>
-    <p><small>Texto pequeno</small></p>
-    <p><big>Texto Grande</big></p>
-    <p><s>Texto taxado</s></p>
-    <p><del>Taxado</del></p>
-    <p>H<sub>2</sub>O</p>
-    <p>x<sup>2</sup></p>
-
-    <!-- Cotação e elementos de Citação -->
-    <p><q>Texto cotado</q></p>
-    <p><blockquote>Texto testesdfsdfsdfsdfsdfsdfsdfsdfsdf</blockquote></p>
-
-    <!-- Citação com atributo cite -->
-    <p>Here is a quote from WWF's website:</p>
-    <blockquote cite="http://www.worldwildlife.org/who/index.html">
-    For 60 years, WWF has worked to help people and nature thrive. As the world's leading conservation organization, WWF works in nearly 100 countries. At every level, we collaborate with people around the world to develop and deliver innovative solutions that protect communities, wildlife, and the places in which they live.
-    </blockquote>
-
-    <!-- Abreviação -->
-    <p>The <abbr title="World Health Organization">WHO</abbr> was founded in 1948.</p>
-
-    <!-- Endereço -->
-    <address>
-        Written by John Doe.<br>
-        Visit us at:<br>
-        Example.com<br>
-        Box 564, Disneyland<br>
-        USA
-    </address>
-
-    <!-- Citação -->
-    <p><cite>The Scream</cite> by Edvard Munch. Painted in 1893.</p>
-
-    <!-- Direção bidirecional -->
-    <bdo dir="rtl">This text will be written from right to left</bdo>
-
-    <!-- Exemplos de listas não ordenadas -->
-    <ul> 
-        <li>item 1</li> 
-        <li>item 2</li>
-        <li>item 3</li>
-    </ul>
-
-    <!-- Exemplos de listas ordenadas -->
-    <ol> 
-        <li>item A</li>
-        <li>item B</li>
-        <li>item C</li>
-    </ol>
-
-    <!-- Lista de definição -->
-    <dl>
-        <dt>Chrome</dt>
-        <dd>
-            O Chrome foi desenvolvido pelo Google...
-        </dd>
-        <dt>IE</dt>
-        <dd>
-            O IE foi desenvolvido pela Microsoft...
-        </dd>
-        <dt>Safari</dt>
-        <dd>
-            O Safari foi desenvolvido pela Apple...
-        </dd>
-    </dl>
-
-    <!-- Imagens -->
-    <img src="../000-Exercícios/assets/States_of_Brazil.png" 
-         alt="Mapa do Brasil" title="Mapa dos estados do brasil" width="150" height="150">
-
-</body>
-</html>
-
+#### Formatação básica do html sem divisões 
 ```
-## Exemplos de Links
+{
+ <!DOCTYPE html> 
+ <html lang="en">
+    <head>
+        // parametros 
+        <meta charset="UFT-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0>
+        <title>Document</title>
+    </head>
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-
-<body>
-    <h1 id="titulo1">Titulo do Site</h1>
-
-    <!-- Link para outro site -->
-    <p>O <a href="https://www.entra21.com.br/" target="_self">Entra21</a> é um programa de empregabilidade e formação profissional</p>
-
-    <!-- Link para um bookmark da própria página -->
-    <p><a href="#titulo1">Link para o topo da página</a></p>
-
-    <!-- Link para um bookmark de outra página -->
-    <p><a href="https://www.proway.de/#colophon" target="_blank">Rodapé no site da Proway</a></p>
-
-    <!-- Link para uma página do próprio site -->
-    <p><a href="contato.html">Página de contato</a></p>
-
-    <!-- Link em uma imagem/figura/tag -->
-    <a href="https://pt.wikipedia.org/wiki/HTML" target="_black">
-        <img src="assets/brazil-flag.png" width="150" alt="fundo js">
-    </a>
-
-    <!-- Link para E-mail -->
-    <p>Gostou de nossa oferta? Entre em <a href="mailto:ivan.borchardt.cobol@gmail.com?subject=Contato&body=Estou entrando em contato referente à oferta...">contato</a></p>
-
-    <!-- Link de Download -->
-    <p>Baixe a <a href="assets/brazil-flag.png" download>bandeira do Brasil</a></p>
-
-</body>
-</html>
+    <body>  
+        // texto     
+        <h1>Título h1</h1> 
+        <p> paragrafo </p>
+    </body>  
+ </html>  
+}
 ```
+```
+{
+    <!DOCTYPE html>
+    <html lang="en">
 
-
-## Exemplo de Elementos Estruturais
-
-```html
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
+    <head>
+         
+    <meta charset="UFT-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+    <title>Spotyflix</title>
+    
+    </head>
 
-<body>
-    <div>
-        <!-- Área de Cabeçalho -->
+    <body>
         <header>
+<<<<<<< HEAD
 ```
+=======
+            <nav>
+                <ul>
+                
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section>
+
+            </section>
+            <section>
+                <h2>FAQ</h2>
+
+            </section>
+
+        </main>
+        <footer>
+
+        </footer>
+    </body>
+
+    </html>
+}
+```
+
+
+#### Listas html
+ul -> unordered list
+ol -> ordered list
+```
+{
+    // exemplo de lista  <!--unordered list, ul-->
+    <ul>
+        <li>item 1</li>
+        <li>item 2</li>
+    </ul>
+}
+```
+```
+{
+    <dt>heading A</dt>
+    <dd>
+        texto A
+    </dd>
+
+    <dt>heading B</dt>
+    <dd>
+        texto B
+    </dd>
+}
+```
+#### Mudanças no texto (negrito, itálico, etc) 
+```
+{
+  <p><b> negrito </></p>   
+  <p><strong>ênfase</strong></p>
+  <p><i>italico</i></p>  
+  <p><em>enfatizado</em></p>  
+  <p><mark>grifado</mark></p>  
+  <p><small>texto menor</small></p>
+  <p><big>texto maior</big></p>
+  <p><del>taxado</del></p>
+  <p>The <abbr title="World Health Organization">WHO</abbr> was founded in 1948.</p> 
+  
+}
+```
+
+```
+{
+    <form action="">
+
+        <!-- Exemplo 001 - Caixa de texto -->
+        <label for="idTexto">Texto</label><br>
+        <input type="text" id="idTexto" name="nmTexto" class="inputTexto">
+
+        <br>
+        <!-- Exemplo 002 - Caixa de texto - Numerico -->
+        <label for="idNumero">Numero</label><br>
+        <input type="number" id="idNumero" name="nmNumero">
+
+        <br>
+        <!-- Exemplo 003 - Caixa de texto - Data -->
+        <label for="idData">Data</label><br>
+        <input type="date" id="idData" name="nmData">
+
+        <br>
+        <!-- Exemplo 004 - Caixa de texto - Senha -->
+        <label for="idSenha">Senha</label><br>
+        <input type="password" id="idSenha" name="nmSenha">
+
+        <br><br>
+        <!-- Exemplo 005 - Checkbox -->
+        <input type="checkbox" name="nmOpcao1" id="idOpcao1">
+        <label for="idOpcao1">Opação 1</label>
+        <br>
+        <input type="checkbox" name="nmOpcao2" id="idOpcao2">
+        <label for="idOpcao2">Opação 2</label>
+        <br>
+        <input type="checkbox" name="nmOpcao3" id="idOpcao3">
+        <label for="idOpcao3">Opação 3</label>
+
+        <br><br>
+        <!-- Exemplo 006 - Radio Button -->
+        <input type="radio" name="nmGenero" id="idFeminino" checked>
+        <label for="idFeminino">Feminino</label>
+        <br>
+        <input type="radio" name="nmGenero" id="idMasculino">
+        <label for="idMasculino">Masculino</label>
+        <br>
+
+        <br><br>
+        <!-- Exemplo 007 - Select -->
+        <label for="idSelect">Select</label><br>
+        <select name="nmSelect" id="idSelect">
+            <option value="RS">Rio Grande do Sul</option>
+            <option value="SC">Santa Catarina</option>
+            <option value="PR">Paraná</option>
+            <option value="SP">São Paulo</option>
+            <option value="MG">Minas Gerais</option>
+        </select>
+
+        <br><br>
+        <!-- Exemplo 008 - Datalist -->
+        <label for="idNavegadores">Navegadores</label><br>
+        <input list="idListaNav" id="idNavegadores">
+        <datalist id="idListaNav">
+            <option value="Internet Explorer">IE</option>
+            <option value="Firefox">FI</option>
+            <option value="Chrome">CH</option>
+            <option value="Opera">OP</option>
+        </datalist>
+
+
+        <br><br>
+        <!-- Exemplo 009 - Textarea -->
+        <label for="idTextArea">Digite aqui sua pergunta:</label><br>
+        <textarea name="nmTextArea" id="idTextArea" cols="30" rows="10"></textarea>
+
+
+
+        <br><br>
+        <input type="button" value="Capturar" onclick="capturaTela()">
+    </form>
+}
+```
+#### Anotações HTML
+
+html: páginas de internet, layout de documentos e outros layouts específicos  
+parte head -> não é visivel, é passado parâmetros nesse lugar  
+parte body -> é a parte que se ve
+
+**metadados**: dados que descrevem dados
+
+**id = 'nome'** -> colocar id em algum lugar, por exemplo no footer, para depois poder colcoar como índice e ir direto pra esse local     
+exemplo id:
+```
+{
+    <footer id="idfooter">
+        <p>Siga-nos no instagram: @Spotyflix</p>
+        <p>www.spotyflix.com</p>
+    </footer>
+}
+```
+
+**toggle** ->
+```
+{
+    <details>
+        <summary>Pergunta/titulo do toggle</summary>
+        <p>dentro do toggle</p>
+    </details>
+}
+```
+#### Estruturação dentro do body do HTML
+
+Depois essa formatação é arrumada com o Css para ficar tudo no seu lugar  
+**figcaption** -> colocar creditos na foto, linha peguena embaixo da foto  
+```
+{
+    <body>
+    <div>
+        <!---------------- Area de Cabeçalho ---------------------->
+        <header>
+                <h1>titulo</h1>
+                <nav>
+                    <ul>  **unsorted list**
+                        **cabeçalho usa links que levam a outras páginas**
+                        <li><a href="">Home</a></li>
+                        <li><a href="">Loja</a></li>
+                        <li><a href="">Contato</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div>
+                <p>logo da empresa</p>
+            </div>
+        </header>
+        <!---------------- Barra Lateral Esquerda ---------------------->
+        <aside>
+            <p>aside esquerda</p>
+        </aside>
+        <!---------------- Sessao Principal ---------------------->
+        <main>
+            <section>
+                <span><p>caixa de uma unica linha</p></span> **usado ao inves de strong, negrito, etc que é arrumado depois com css**  
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    <span>facere modi animi</span>
+                </p>
+            </section>
+
+            <section>
+                <h2>Titulo</h2>
+                <article>
+                    <h3>titulo do artigo </h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum, ratione 
+                        laboriosam tenetur reiciendis unde sunt praesentium.</p>
+                </article>
+            </section>
+
+            <section>
+                <figure>
+                    <img src="" alt="">
+                </figure>
+            </section>
+        </main>
+        <!---------------- Sessão de Rodapé  ---------------------->
+        <footer>
+
+        </footer>
+    </div>
+</body>
+}
+```     
+
+#### Tabela html 
+##### Estrutura de uma tabela
+```
+{
+    <!-- Estrutura completa de uma tabela-->
+    <table border="1" cellpadding="10" width="100%" align="center">
+        <thead>
+            <tr>
+                <th>Qtd</th>
+                <th>Descrição</th>
+                <th>Valor</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr align="center"> <!--alinha no centro-->
+                <td>1</td>
+                <td>Lápis</td>
+                <td>1,00</td>
+            </tr>
+            <tr bgcolor="red"> <!--background color -->
+                <td align="right">2</td>
+                <td>Caneta</td>
+                <td>3,00</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Caderno</td>
+                <td>10,00</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Borracha</td>
+                <td>5,00</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="2"><b>Total</b></td>
+                <td>19,00</td>
+            </tr>
+        </tfoot>
+
+    </table>
+
+}
+```
+
+#### Inserindo links no HTML:
+
+**alt** -> texto alternativo, aparece quando a imagem da errado e serve para indexar, para o Google entender o que tem no site, ajudando no engajamento.  
+**target** ->    
+blanc (abre o link em outra aba)   
+self (abre no mesmo navegador)  
+**title** -> texto que aoarece quando passa o mouse me cima do link    
+**download** -> baixar a foto do link
+
+
+
+#### Audio visual html
+```
+{
+    <!-- Link de Download-->
+    <p>baixe a <a href="assets/brazil-flag.png" download>bandeira do brasil</a></p>
+
+    <!-- Tipos de imagem jpeg, png, gif, svg, ico -->
+    <figure>
+        <img src="assets/brazil-flag.png" alt="" width="100" title="Bandeira do Brasil">
+        <figcaption>Créditos: Algum Artista Qualquer</figcaption>
+    </figure>
+
+    <!-- Vídeo mp4, ogg, WebM-->
+    <video width="320" controls autoplay loop muted>
+        <source src="assets/20230513_160933.mp4">
+        <source src="assets/20230513_160933.ogg">
+        Seu Navegador não é compatível com a tag Vídeo
+    </video>
+
+    <!-- Vídeo do Youtube -->
+    <iframe width="420" height="315" src="https://www.youtube.com/embed/SsqXAP0EeEI">
+    </iframe>
+
+    <!-- Audio -->
+    <audio controls autoplay loop muted>
+        <source src="assets/bad_to_the_bone.mp3" type="audio/mpeg">
+        <source src="assets/bad_to_the_bone.ogg" type="audio/ogg">
+        Seu Navegador não é compatível com a tag Audio
+    </audio>
+    <p>download</p>
+}
+```
+
+#### Emmet Abbreviations
+Conjunto de abreviações de código que ajudam a ganhar produtividade  
+
+** "html:5" ou "!" -> monta a estrutura básica do html  
+** "sp" e "tab" -> gera todo o código de um span  
+** "a" e "tab" -> gera o código da âncora com o href  
+** "session>div>h1" e "enter" -> cria a estrutura feita um h1 dentro de uma div que esta dentro da session, ou seja, cria elementos aninhados    
+** "header>nav>ul>li*3" e "enter" -> cria o li com 3 itens  
+** "h1{titulo da pagina}" e "enter" -> cria o h1 com esse titulo dentro dele e assim com outros componentes tambem   
+** "header+main+footer" e "enter" -> cria componentes no mesmo nível hierarquico, ou seja, cria elementos "irmãos"   
+** "lorem" -> cria um texto redundante só para formatar o site  
+** "lorem10" -> cria o texto redundante com 10 palavras, e assim com outros números  
+** "ul>lorem6*4" -> cria a ul com 4 li, porque é uma tag filha  
+** "div[id=divPrincipal]" e "enter" -> cria a div com seu id, da para colocar o name e calss também, todos as mesmo tempo  
+** "div.nomeClasse" -> cria a div com a sua class nomeada  
+** "div#nomeId" -> cria a div com o id nomeado  
+** "#idCard" -> cria uma div com esse nome  
+** ".card" -> cria a div com esse nome de classe  
+** "[name=div1]" -> cria uma div com o name div1  
+** "ul>li*4{texto $}" -> cria lista com os textos 1, texto 2... o $ representa números sequenciais  
+** "ul>li*3.class-${texto $}" -> cria cada li com o nome class-1, class-2...   
+** "(header>nav)+main+footer" -> cria a estrutura com o nav dentro do header e o header, main e footer no mesmo nivel hierárquico ou pode se usar "header>nav^main+footer" que fica igual, o ^ é como se saisse um nivel hierárquico  
+
+- [Emmet Documentation](https://docs.emmet.io/cheat-sheet/)
+
+exemplo: 
+```
+{
+
+    <!--(header>nav>ul>li*3{menu $})+(main>section.linha>.card#card-$*4>(h2{Nome $}+p{descrição}+button{Comprar}))+footer-->
+    <header>
+        <nav>
+            <ul>
+                <li>menu 1</li>
+                <li>menu 2</li>
+                <li>menu 3</li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="linha">
+            <div class="card" id="card-1">
+                <h2>Nome 1</h2>
+                <p>descrição</p>
+                <button>Comprar</button>
+            </div>
+            <div class="card" id="card-2">
+                <h2>Nome 2</h2>
+                <p>descrição</p>
+                <button>Comprar</button>
+            </div>
+            <div class="card" id="card-3">
+                <h2>Nome 3</h2>
+                <p>descrição</p>
+                <button>Comprar</button>
+            </div>
+            <div class="card" id="card-4">
+                <h2>Nome 4</h2>
+                <p>descrição</p>
+                <button>Comprar</button>
+            </div>
+        </section>
+    </main>
+    <footer></footer>
+}
+```
+>>>>>>> d54d019 (atualições da anotações nas aulas do entra 21)
