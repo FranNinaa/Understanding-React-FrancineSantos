@@ -192,7 +192,7 @@ Exemplo de uso de id:
 
 - html:5: Gera a estrutura básica do HTML5.
 - a:link: Gera um link.
-- h1{Titulo}: Cria um cabeçalho <h1> com o texto "Titulo".
+- h1{Titulo}: Cria um cabeçalho < h1 > com o texto "Titulo".
 - ul>li*3: Gera uma lista não ordenada com 3 itens.
 - div#content: Gera uma <div> com o ID "content".
 - div.classname: Gera uma <div> com a classe "classname".
