@@ -2,7 +2,7 @@
 
 #### Formatação básica do html sem divisões 
 ```
-{
+
  <!DOCTYPE html> 
  <html lang="en">
     <head>
@@ -18,10 +18,10 @@
         <p> paragrafo </p>
     </body>  
  </html>  
-}
+
 ```
 ```
-{
+
     <!DOCTYPE html>
     <html lang="en">
 
@@ -37,7 +37,7 @@
         <header>
 <<<<<<< HEAD
 ```
-=======
+
             <nav>
                 <ul>
                 
@@ -60,7 +60,7 @@
     </body>
 
     </html>
-}
+
 ```
 
 
@@ -68,16 +68,16 @@
 ul -> unordered list
 ol -> ordered list
 ```
-{
+
     // exemplo de lista  <!--unordered list, ul-->
     <ul>
         <li>item 1</li>
         <li>item 2</li>
     </ul>
-}
+
 ```
 ```
-{
+
     <dt>heading A</dt>
     <dd>
         texto A
@@ -87,11 +87,11 @@ ol -> ordered list
     <dd>
         texto B
     </dd>
-}
+
 ```
 #### Mudanças no texto (negrito, itálico, etc) 
 ```
-{
+
   <p><b> negrito </></p>   
   <p><strong>ênfase</strong></p>
   <p><i>italico</i></p>  
@@ -102,11 +102,11 @@ ol -> ordered list
   <p><del>taxado</del></p>
   <p>The <abbr title="World Health Organization">WHO</abbr> was founded in 1948.</p> 
   
-}
+
 ```
 
 ```
-{
+
     <form action="">
 
         <!-- Exemplo 001 - Caixa de texto -->
@@ -181,7 +181,7 @@ ol -> ordered list
         <br><br>
         <input type="button" value="Capturar" onclick="capturaTela()">
     </form>
-}
+
 ```
 #### Anotações HTML
 
@@ -194,12 +194,12 @@ parte body -> é a parte que se ve
 **id = 'nome'** -> colocar id em algum lugar, por exemplo no footer, para depois poder colcoar como índice e ir direto pra esse local     
 exemplo id:
 ```
-{
+
     <footer id="idfooter">
         <p>Siga-nos no instagram: @Spotyflix</p>
         <p>www.spotyflix.com</p>
     </footer>
-}
+
 ```
 
 **toggle** ->
@@ -209,14 +209,14 @@ exemplo id:
         <summary>Pergunta/titulo do toggle</summary>
         <p>dentro do toggle</p>
     </details>
-}
+
 ```
 #### Estruturação dentro do body do HTML
 
 Depois essa formatação é arrumada com o Css para ficar tudo no seu lugar  
 **figcaption** -> colocar creditos na foto, linha peguena embaixo da foto  
 ```
-{
+
     <body>
     <div>
         <!---------------- Area de Cabeçalho ---------------------->
@@ -269,7 +269,7 @@ Depois essa formatação é arrumada com o Css para ficar tudo no seu lugar
         </footer>
     </div>
 </body>
-}
+
 ```     
 
 #### Tabela html 
@@ -316,7 +316,7 @@ Depois essa formatação é arrumada com o Css para ficar tudo no seu lugar
 
     </table>
 
-}
+
 ```
 
 #### Inserindo links no HTML:
@@ -332,7 +332,7 @@ self (abre no mesmo navegador)
 
 #### Audio visual html
 ```
-{
+
     <!-- Link de Download-->
     <p>baixe a <a href="assets/brazil-flag.png" download>bandeira do brasil</a></p>
 
@@ -360,7 +360,7 @@ self (abre no mesmo navegador)
         Seu Navegador não é compatível com a tag Audio
     </audio>
     <p>download</p>
-}
+
 ```
 
 #### Emmet Abbreviations
@@ -390,7 +390,7 @@ Conjunto de abreviações de código que ajudam a ganhar produtividade
 
 exemplo: 
 ```
-{
+
 
     <!--(header>nav>ul>li*3{menu $})+(main>section.linha>.card#card-$*4>(h2{Nome $}+p{descrição}+button{Comprar}))+footer-->
     <header>
@@ -427,6 +427,6 @@ exemplo:
         </section>
     </main>
     <footer></footer>
-}
+
 ```
 >>>>>>> d54d019 (atualições da anotações nas aulas do entra 21)
