@@ -40,6 +40,7 @@ No exemplo, as regras de estilo internas estão dentro do elemento < style >:
 - Estilos Inline (mais específicos)
 - Folha de Estilos Interna
 - Folha de Estilos Externa (menos específicos)
+  
 ### Certifique-se de organizar seus estilos de acordo com a hierarquia e a especificidade necessárias para seu projeto. O uso de folhas de estilos externas é recomendado para manter seu código mais organizado e facilitar a manutenção.
 
 ### Exemplo passado na aula
