@@ -126,8 +126,7 @@ background-clip: border-box;/*Define se o conteúdo será recortado com base nos
 background: url('imagem.jpg') center top no-repeat fixed;
 ```
 ### O uso adequado da propriedade background é fundamental para criar designs atraentes e personalizados em suas páginas da web, adicionando profundidade e estilo aos elementos. Ela oferece grande flexibilidade para estilizar o fundo de elementos HTML de acordo com suas necessidades de design.
-## Anotações Gerais CSS
-**Funções:** Estilizar elementos HTML, controle de layout, animações e transições, pseudoclasses e pseudoelementos, estilos de formulários, transformações e efeitos 2D/3D, controle de impressão.
+
 
 ### Exemplo passado na aula 
 ```html
