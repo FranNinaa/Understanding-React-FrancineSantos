@@ -1,7 +1,14 @@
 # Anotações das Aula de CSS
 
-## Exemplos de como adiciona o CSS no código HTML
+## Introdução 
 
+#### O Cascading Style Sheets, mais conhecido como CSS, é uma linguagem de estilo utilizada na web para controlar a apresentação e o design de páginas da internet. CSS desempenha um papel essencial na criação de experiências visuais atraentes e funcionais na web, permitindo que os desenvolvedores e designers controlem a formatação, o layout e a aparência de elementos HTML em um site.
+
+#### Esta linguagem de estilo oferece uma ampla gama de recursos e propriedades que permitem personalizar cores, fontes, espaçamentos, posicionamentos e muitos outros aspectos do conteúdo da web. Com CSS, é possível criar layouts responsivos que se adaptam a diferentes dispositivos, tornando a experiência do usuário mais consistente e agradável em smartphones, tablets e computadores desktop.
+
+#### Além disso, o CSS segue o princípio da separação de preocupações, o que significa que você pode manter o conteúdo (HTML), a apresentação (CSS) e a interatividade (JavaScript) separados, facilitando a manutenção e a escalabilidade do seu projeto web.
+
+#### Neste contexto, vamos explorar os conceitos fundamentais, propriedades e técnicas avançadas do CSS, ajudando a criar páginas web visualmente atraentes e funcionais. O CSS desempenha um papel crucial na web moderna, permitindo que as páginas se destaquem, transmitam informações de maneira eficaz e proporcionem uma experiência de usuário memorável.
 #### Para adicionar estilos CSS a um arquivo HTML, você tem três opções principais:
 
 #### Folha de Estilos Externa:
