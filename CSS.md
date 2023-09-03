@@ -28,7 +28,7 @@ No exemplo, as regras de estilo internas estão dentro do elemento < style >:
 
 - Você pode aplicar estilos diretamente a um elemento HTML usando o atributo style. Isso é chamado de "estilo inline".
 
-- No exemplo, o estilo inline é aplicado ao elemento <h1> desta maneira:
+- No exemplo, o estilo inline é aplicado ao elemento < h1 > desta maneira:
 
 ```html
 <h1 style="color: beige;">Testes</h1>
