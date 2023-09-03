@@ -1,125 +1,45 @@
+![logo entra 21](https://cdn.sonicadigital.com.br/entra21/storage/header/257/original-61f8610472d4f.png)
 
+## O projeto "Entra 21" da Blusoft é uma iniciativa voltada para capacitar jovens e adultos na área de tecnologia da informação (TI) e prepará-los para o mercado de trabalho na região de Blumenau, Santa Catarina, Brasil. O programa visa fornecer oportunidades de formação e emprego em um setor que está em constante crescimento.
 
-# O que é Repositório Local e Repositório Remoto
+## Resumo do projeto:
 
+### Objetivo: O principal objetivo do Entra 21 é promover a inclusão social e profissional por meio da capacitação em TI, oferecendo às pessoas habilidades técnicas e comportamentais necessárias para ingressar no mercado de trabalho.
 
-<p><img alt="Git GitHub" title="" src="https://terminalroot.com.br/assets/img/cursos/git.jpg" /></p>
+### Parcerias: O projeto conta com parcerias estratégicas com empresas de TI da região, instituições de ensino, órgãos governamentais e organizações da sociedade civil para garantir o sucesso do programa.
 
-## Repositório Local
+### Capacitação: Os participantes do programa recebem treinamento em diversas áreas da TI, como programação, banco de dados, design, entre outras. As aulas são ministradas por profissionais qualificados e abordam tanto aspectos técnicos quanto habilidades interpessoais.
 
-Um repositório local é um diretório em sua máquina onde você mantém e gerencia seus arquivos de projeto, histórico de versões e informações de controle de código usando o sistema de controle de versão Git. O Git permite que você controle as mudanças feitas nos arquivos ao longo do tempo, criando commits que representam snapshots do estado dos arquivos em um determinado momento.
+### Estágios e Empregabilidade: Uma das características marcantes do Entra 21 é a ênfase na colocação dos participantes no mercado de trabalho. O programa auxilia na busca por estágios e empregos nas empresas parceiras, criando oportunidades concretas para os formandos.
 
-Principais características de um repositório local:
+### Inclusão Social: O projeto também busca promover a inclusão social, atendendo a diversos públicos, incluindo jovens em situação de vulnerabilidade, pessoas em busca de reinserção no mercado de trabalho e outros grupos que buscam oportunidades na área de TI.
 
-- **Histórico de Versões:** O Git mantém um histórico completo de todas as alterações feitas nos arquivos ao longo do tempo, permitindo que você acompanhe o progresso do projeto e reverta para versões anteriores se necessário.
+### Resultados: O Entra 21 tem um histórico de sucesso na formação de profissionais de TI e na inserção no mercado de trabalho. Muitos ex-alunos conseguem empregos bem remunerados e contribuem para o crescimento da indústria de tecnologia na região.
 
-- **Trabalho Offline:** Você pode fazer commits e alterações em seu repositório local sem precisar de conexão com a internet. Isso é útil quando você está trabalhando em um ambiente desconectado.
+### Em resumo, o projeto Entra 21 da Blusoft é uma iniciativa que visa capacitar pessoas para o mercado de trabalho em TI, promovendo a inclusão social e o desenvolvimento econômico da região de Blumenau, Santa Catarina. Por meio de parcerias, treinamento de qualidade e assistência na busca por empregos, o programa tem impactado positivamente a vida de muitos participantes.
 
-## Repositório Remoto
+# Curso de JavaScript React
 
-Um repositório remoto é um repositório hospedado em um servidor online, como o GitHub. Ele serve como um local centralizado onde você pode compartilhar seu código com outros colaboradores, permitindo que eles vejam, revisem e contribuam para o projeto. O GitHub fornece uma plataforma para armazenar, gerenciar e colaborar em projetos usando o Git.
-
-Principais características de um repositório remoto:
-
-- **Colaboração:** Múltiplos desenvolvedores podem colaborar em um projeto compartilhando suas alterações no repositório remoto. Isso permite que eles trabalhem simultaneamente sem conflitos.
-
-- **Backup:** O repositório remoto serve como um backup seguro para o código-fonte do projeto. Se ocorrerem problemas no repositório local, você ainda terá uma cópia segura no repositório remoto.
-
-- **Acesso Universal:** Como o repositório remoto é acessível pela internet, ele permite que colaboradores de diferentes locais e equipes acessem e contribuam para o projeto.
-
-#### Os repositórios locais e remotos são elementos fundamentais no desenvolvimento de software usando o Git e GitHub. Eles permitem que você gerencie e compartilhe seu código de forma eficaz, tornando a colaboração e o controle de versão mais eficientes e organizados.
-
-# Tutorial de Uso do Git e GitHub
-
-Este tutorial fornece um guia passo a passo sobre como usar o Git para controle de versão e o GitHub para hospedar seus projetos.
-Com apoio em aprendizado com o professor Ivan-J-Borchardt no curso Entra21.
-
-## Passo 1: Instalação
-
-- Faça o download e instale o Git em sua máquina a partir do site oficial: [https://git-scm.com/downloads](https://git-scm.com/downloads).
-
-## Passo 2: Configuração Inicial
-
-- Configure seu nome de usuário e endereço de e-mail no Git:
-```
-   git config --global user.name "Seu Nome"
-   git config --global user.email "seu@email.com"
-```
-## Passo 3: Iniciando um Repositório Local
-- Crie uma pasta para o seu projeto e navegue até ela no terminal.
-- Inicie um novo repositório Git:
-```
-git init
-```
-## Passo 4: Adicionando e Comitando Mudanças
-- Crie ou copie os arquivos do seu projeto para a pasta do repositório.
-- Adicione os arquivos ao controle de versão:
-```
-git add nome-do-arquivo
-```
-- Realize um commit das mudanças:
-```
-git commit -m "Mensagem descritiva das mudanças"
-```
-## Passo 5: Criando um Repositório no GitHub
-- Acesse o GitHub em https://github.com e faça login na sua conta.
-- Clique no sinal '+' no canto superior direito e escolha "New Repository".
-- Preencha o nome do repositório, descrição e configurações desejadas. Clique em "Create Repository".
-
-## Passo 6: Conectando Repositório Local ao GitHub
-- Copie a URL do repositório criado no GitHub.
-- No terminal, adicione o link remoto ao repositório local:
- ```
- git remote add origin URL-do-Repositório
-```
-- Envie suas mudanças locais para o GitHub:
- ```
-git push -u origin master
-```
-- O origin master é padrão podendo sempre usando o mesmo
-- Para verifica se esta mesmo na master pode digitar o comando:
-
-```
-git status
-```
-- Se esteja em outro repositório como por exemplo a main
-- Caso precise mudar para a Main digite os seguintes códigos:
-```
-git branch -M main
-```
-- Fazendo esses passos logo após digite status para a verificação
-  
-## Passo 7: Clonando Repositório do GitHub
-
-- Acesse a página do repositório que deseja clonar. O endereço normalmente é composto pelo site do github + nome do usuáiro + nome do repositório + '.git'.
-- Você pode conseguir esse endereço acessando a página do repositório no GitHub e clicando em 'Clonar' ou 'Clone', conforme imagem a seguir:
-
-
-    <img  align="center" alt="Git GitHub" src="https://www.alura.com.br/artigos/assets/clonando-repositorio-git-github/imagen18_1.gif" />
-
-
-- No terminal, acesse a pasta onde deseja clonar o repositório. Normalmente, ao abrirmos o terminal, ele abre dentro do usuário padrão. 
-- Considerando isso, rodamos o comando para acessar a pasta onde salvaremos o repositório.
-- Com isso digite o comando a seguir:
-```
-git clone (http do seu projeto que foi copiado conforme a imagem anterior)
-```
-- Esse comando irá criar uma pasta (no local onde rodou o comando) com o nome do repositório (e todas suas pastas e arquivos).
-
-## Passo 8: Baixar as atualizações do repositório original
-- Depois que já temos nosso repositório em ambiente local, é necessário sempre mantê-lo atualizado.
-- Para isso, sempre que formos iniciar uma tarefa, rodamos o comando:
-```
-git pull
-```
-- Esse comando baixa as novidades do repositório para nossa máquina.
-- Definindo que queremos puxar as atualizações da branch master do repositório remoto de origem:
-```
-git pull origin master
-```  
-- E está feito! Seu repositório está atualizado!
-
-- Autor Francine dos Santos
-
+#### Resumo
 
  
+```
+Inicio        : 2023.08.14 
+Fim           : 2024.03.01
+Horário       : 13:30h - 17:30h 
+Carga Horária:
+-   Disciplinas Técnicas        : 360h/a
+-   Inglês                      : 80h/a
+-   Desenvolvimento Humano      : 20h/a
+-   Empreendedorismo e Inovação : 8h/a 
+-   Contabilidade e Finanças    : 12h/a
+Aula Magna: 2023.08.28 
+Ciclo de Palestras: 2023.11.21 
+Feriados e Emendas: 2023.09.07 e 2023.09.08
+                    2023.10.12 e 2023.10.13
+                    2023.11.02 e 2023.11.03 e 2023.11.15
+Recesso/Férias: 2023.12.22 - 2024.01.12 
+Formatura e Mostra de Talentos: 2024.02.28 - 2024.02.29
+Último dia de Aula: 2024.03.01
+```
+#### Esse repositório é referente as anotações das aulas ministradas do projeto entra 21.
