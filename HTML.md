@@ -790,13 +790,13 @@ O elemento < form > é usado para criar um formulário HTML. Ele envolve todos o
 <input type="text" name="nome" id="nome">
 ```
 
-- <textarea>: Usado para criar campos de texto multilinha. Exemplo:
+- < textarea >: Usado para criar campos de texto multilinha. Exemplo:
 
 ```html
 <textarea name="comentario" id="comentario" rows="4" cols="50"></textarea>
 ```
 
-- <select>: Cria uma lista suspensa (dropdown) ou uma caixa de seleção. Exemplo:
+- < select >: Cria uma lista suspensa (dropdown) ou uma caixa de seleção. Exemplo:
 
 ```html
 <select name="cidade" id="cidade">
