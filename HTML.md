@@ -822,7 +822,7 @@ Exemplo:
 ```
 
 #### Rótulos (< label >):
-- Os elementos <label> são usados para associar um texto descritivo a um campo de entrada. Isso melhora a acessibilidade e a usabilidade, permitindo que os usuários cliquem no rótulo para selecionar o campo correspondente. Exemplo:
+- Os elementos < label > são usados para associar um texto descritivo a um campo de entrada. Isso melhora a acessibilidade e a usabilidade, permitindo que os usuários cliquem no rótulo para selecionar o campo correspondente. Exemplo:
 
 ```html
 <label for="nome">Nome:</label>
