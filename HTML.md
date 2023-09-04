@@ -808,7 +808,7 @@ O elemento < form > é usado para criar um formulário HTML. Ele envolve todos o
 
 #### Botões de Envio (< input type="submit" >, < input type="reset" >):
 
-- < input type="submit" >: Cria um botão que, quando clicado, envia os dados do formulário para o servidor.
+- < input type ="submit" >: Cria um botão que, quando clicado, envia os dados do formulário para o servidor.
 Exemplo:
 
 ```html
@@ -977,8 +977,6 @@ Exemplo:
         <input type="button" name="" id="" value="Testar">
 
     </form>
-
-
 
     
 </body>
