@@ -770,4 +770,219 @@ A tag <video> é usada para incorporar conteúdo de vídeo em uma página da web
 ```
 </br>
 
+## Formulários
+
+#### Formulários em HTML são elementos que permitem a coleta de informações de usuários por meio de campos interativos, como caixas de texto, botões de opção, caixas de seleção e botões de envio. Eles desempenham um papel fundamental na interatividade de sites da web, permitindo que os visitantes insiram dados, façam escolhas e enviem informações para processamento em servidores web. Abaixo, vou abordar os principais elementos e conceitos relacionados a formulários em HTML:
+
+Elemento < form >:
+O elemento < form > é usado para criar um formulário HTML. Ele envolve todos os elementos de entrada (como campos de texto, botões, etc.) que fazem parte do formulário. O atributo action especifica para onde os dados do formulário serão enviados quando o usuário o enviar. O atributo method define o método HTTP a ser usado para o envio dos dados, como GET ou POST. Exemplo:
+
+```html
+<form action="processar.php" method="post">
+  <!-- campos de entrada aqui -->
+</form>
+```
+#### Elementos de Entrada (< input >, < textarea >, < select >): 
+
+- < input >: Este elemento é usado para criar diversos tipos de campos de entrada, como caixas de texto, botões de opção, caixas de seleção, etc. O atributo type define o tipo de campo de entrada. Exemplo de caixa de texto:
+
+```html
+<input type="text" name="nome" id="nome">
+```
+
+- <textarea>: Usado para criar campos de texto multilinha. Exemplo:
+
+```html
+<textarea name="comentario" id="comentario" rows="4" cols="50"></textarea>
+```
+
+- <select>: Cria uma lista suspensa (dropdown) ou uma caixa de seleção. Exemplo:
+
+```html
+<select name="cidade" id="cidade">
+  <option value="nova-york">Nova York</option>
+  <option value="londres">Londres</option>
+  <!-- outras opções -->
+</select>
+```
+
+#### Botões de Envio (< input type="submit" >, < input type="reset" >):
+
+- < input type="submit" >: Cria um botão que, quando clicado, envia os dados do formulário para o servidor.
+Exemplo:
+
+```html
+<input type="submit" value="Enviar">
+```
+
+ - < input type="reset" >: Cria um botão que redefine todos os campos do formulário para seus valores padrão. Exemplo:
+
+```html
+<input type="reset" value="Limpar">
+```
+
+#### Rótulos (< label >):
+- Os elementos <label> são usados para associar um texto descritivo a um campo de entrada. Isso melhora a acessibilidade e a usabilidade, permitindo que os usuários cliquem no rótulo para selecionar o campo correspondente. Exemplo:
+
+```html
+<label for="nome">Nome:</label>
+<input type="text" name="nome" id="nome">
+```
+
+
+#### Campos Ocultos (< input type="hidden" >):
+- Os campos ocultos são usados para armazenar informações no formulário que não são visíveis para o usuário. Esses campos são frequentemente usados para passar dados entre páginas ou manter o estado do formulário. Exemplo:
+
+```html
+<input type="hidden" name="pagina_atual" value="formulario.html">
+```
+
+#### Validação de Formulário: Você pode adicionar validação de formulário usando JavaScript ou atributos HTML5, como required, pattern, min, max, etc. Isso ajuda a garantir que os dados inseridos pelo usuário estejam no formato correto antes de serem enviados para processamento.
+
+#### Processamento de Formulário: O processamento dos dados do formulário geralmente ocorre no lado do servidor, onde os dados são recebidos, validados e processados. A linguagem de programação comum para esse processamento é o PHP, mas muitas outras linguagens, como Python, Ruby e Node.js, também são usadas.
+
+#### Segurança: É importante tomar medidas de segurança ao lidar com formulários, como validar e escapar dados para evitar ataques de injeção de código (como SQL Injection e Cross-Site Scripting).
+
+#### Lembre-se de que a estrutura e o funcionamento de um formulário podem variar de acordo com as necessidades específicas do seu projeto. É importante criar formulários que sejam intuitivos e amigáveis para os usuários, além de seguros contra possíveis ameaças de segurança.
+
+#### Exemplo feito em aula 
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .etiqueta{
+            display: block;
+        }
+
+
+    </style>
+</head>
+<body>
+    <form action="">
+
+        <label for="idIdade" class="etiqueta">Idade</label>
+        <input type="text" name="" id="">
+
+        <div>
+            <div>
+                <label for="idCpf">CPF:</label>
+            </div>
+            <input type="text" name="" id="">
+        </div>
+
+        <label for="idNome">Nome:</label><br>
+        <input type="text" id="idNome" name="nmNome" value="Joao" >
+
+        <br><br>
+        <label for="idDesc">Descrição</label><br>
+        <textarea name="nmDesc" id="idDesc" cols="30" rows="10">innerText</textarea> <!-- o valor do textarea é a propriedade innerText-->
+ 
+        <br><br>
+        <button type="reset">Limpar</button>
+        <button type="submit">Enviar</button>
+        <button type="button">Testar</button>
+    </form>
+</body>
+</html>
+```
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .etiqueta{
+            display: block;
+        }
+    </style>
+
+</head>
+<body>
+
+    <form action="">
+        <!--Campo de texto de um linha-->
+        <label for="idNome" class="etiqueta">Nome:</label>
+        <input type="text" name="nmNome" id="idNome" value="" placeholder="Nome" required>
+
+
+        <!--Campo Numérico-->
+        <label for="idTemp" class="etiqueta">Temperatura</label>
+        <input type="number" name="nmTemp" id="idTemp" min="-5" max="100" step="0.01">
+
+
+        <!-- Intervalo Numérico-->
+        <label for="idInter" class="etiqueta">Intervalo</label>
+        <input type="range" name="nmInter" id="idInter" min="0" max="100" value="0">
+
+
+        <!-- Caixas de Senha -->
+        <label for="idSenha" class="etiqueta">Senha</label>
+        <input type="password" name="" id="">
+
+        <!-- Caixas para Email-->
+        <label for="idEmail" class="etiqueta">E-mail</label>
+        <input type="email" name="nmEmail" id="idEmail">
+
+
+        <!-- Caixas para Datas-->
+        <label for="idData" class="etiqueta">Data</label>
+        <input type="date" name="nmData" id="idData" min="2022-04-01" max="2022-05-30" >
+
+        <!-- Caixas para Data Hora Local -->
+        <label for="idDataHL" class="etiqueta">Data: </label>
+        <input type="datetime-local" name="nmDataHL" id="idDataHL">
+
+        <!-- Caixas para Hora -->
+        <label for="idHora" class="etiqueta">Hora</label>
+        <input type="time" name="nmHora" id="idHOra">
+
+        <!-- Seletor de cores -->
+        <label for="idCor" class="etiqueta">Cor</label>
+        <input type="color" name="nmCor" id="idCor">
+
+        <!-- Radio Button -->
+        <br><br>
+        <input type="radio" name="nmGenero" id="idFem" checked>
+        <label for="idFem">Feminino</label>
+        <br>
+        <input type="radio" name="nmGenero" id="idMasc">
+        <label for="idFmasc">Masculino</label>
+        <br>
+        <input type="radio" name="nmGenero" id="idMasc">
+        <label for="idFmasc">LGBT</label>
+
+        <!-- Check Box -->
+        <br><br>
+        <input type="checkbox" name="nmMarcas" id="idFordKa">
+        <label for="idFordKa">Ford Ka</label>
+        <br>
+        <input type="checkbox" name="nmMarcas" id="idGol">
+        <label for="idGol">Gol</label>   
+        <br>
+        <input type="checkbox" name="nmMarcas" id="idFerrari">
+        <label for="idGol">Ferrari</label>   
+
+
+        <br><br>
+        <input type="submit" name="" id="">
+        <input type="reset" name="" id="" value="Limpar">
+        <input type="button" name="" id="" value="Testar">
+
+    </form>
+
+
+
+    
+</body>
+</html>
+```
+
 ![logo entra 21](https://cdn.sonicadigital.com.br/entra21/storage/header/257/original-61f8610472d4f.png)
