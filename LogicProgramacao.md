@@ -31,7 +31,7 @@ Aprender lógica de programação é um passo crucial para se tornar um programa
 
 Nesta série de tutoriais, exploraremos esses conceitos em detalhes, fornecendo exemplos práticos e exercícios para ajudá-lo a aprimorar suas habilidades de lógica de programação.
 
-[Lógica de Programação passado na aula - clique que levará para o PDF](/pdfHistoriaLogicaProgramacao/000%20-%20O%20Que%20é%20um%20Computador.pdf)
+[Lógica de Programação passado na aula - clique que levará para o PDF](/biblioteca/001%20-%20Lógica%20de%20Programação.pdf)
 
 
 ## Proposições
@@ -190,6 +190,83 @@ Escolha (opcao) {
 ```
 As estruturas de seleção são fundamentais para controlar o fluxo de execução de um programa, permitindo que ele tome decisões com base nas condições definidas. Elas são amplamente utilizadas em programação para criar lógica complexa e tomar decisões dinâmicas com base nos dados e nas entradas do usuário.
 
+
+## Exemplo feito na aula
+
+#### Hello Word !
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form action="">
+
+    </form>
+
+    <script>
+        var nome = 'João'; //String = texto //linguagem fracamente tipada 
+        var dor = true; //false 
+        var temperatura = 38; 
+        
+        if (nome == "Ivan" 
+        || nome == "João") {
+            console.log('Hellow World! ' + nome);
+        } else {
+            console.log('Ops Não te conheço...!!!');
+        }
+
+    
+
+    </script>
+</body>
+</html>
+```
+#### Estrutura de Seleção com JavaScript
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form action="">
+        <input type="text" id="idTosse" placeholder="Tosse? V ou F"> <br><br>
+        <input type="text" id="idDorGranganta" placeholder="Dor de Garganta? V ou F"><br><br>
+        <input type="number" id="idFebre" placeholder="Febre? Graus"><br><br>
+        <input type="text" id="idFaltaAr" placeholder="Falta de Ar? V ou F"><br><br>
+        <input type="button" value="Testar" onclick="testar()">
+    </form>
+
+    <script>
+        
+        function testar() {
+            var tosse = document.getElementById("idTosse").value;
+            var dorDeGarganta = document.getElementById("idDorGranganta").value;
+            var febre = document.getElementById("idFebre").value;
+            var faltaDeAr = document.getElementById("idFaltaAr").value; 
+            
+            if ((tosse == "V" && dorDeGarganta == "V") 
+            ||  (febre >= 38 && faltaDeAr == "V")) {
+                console.log("Procurar Médico");
+            } else {
+                console.log("Fique em Casa"); 
+            }
+        }
+
+
+    </script>
+</body>
+</html>
+```
 
 
 
