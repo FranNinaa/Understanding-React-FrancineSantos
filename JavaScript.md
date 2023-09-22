@@ -595,3 +595,262 @@ console.log(status); // "Adulto"
 ```
 
 Estes são alguns dos principais operadores em JavaScript. Eles são essenciais para a lógica e o funcionamento dos programas escritos em JavaScript.
+
+### Exemplo feito em aula
+
+Estrutura de Seleção Simples em JavaScript
+A estrutura de seleção simples é geralmente expressa com a instrução if. Ela permite que você execute um bloco de código se uma condição for verdadeira (true).
+
+```javascript
+if (condicao) {
+    // Código a ser executado se a condição for verdadeira
+}
+```
+
+Por exemplo:
+
+```javascript
+let idade = 20;
+
+if (idade >= 18) {
+    console.log("A pessoa é maior de idade.");
+}
+```
+
+Estrutura de Seleção Composta em JavaScript
+A estrutura de seleção composta é frequentemente expressa usando if, else if e else. Permite executar diferentes blocos de código dependendo das condições.
+
+```javascript
+if (condicao1) {
+    // Código a ser executado se a condição1 for verdadeira
+} else if (condicao2) {
+    // Código a ser executado se a condição2 for verdadeira
+} else {
+    // Código a ser executado se nenhuma das condições anteriores for verdadeira
+}
+```
+
+Por exemplo:
+
+```javascript
+let nota = 85;
+
+if (nota >= 90) {
+    console.log("A nota é A");
+} else if (nota >= 80) {
+    console.log("A nota é B");
+} else if (nota >= 70) {
+    console.log("A nota é C");
+} else {
+    console.log("A nota é D");
+}
+```
+
+Neste exemplo, dependendo da nota, uma mensagem diferente será exibida com base nas condições fornecidas.
+
+Essas são as estruturas de seleção simples e compostas em JavaScript, que são cruciais para controlar o fluxo de execução do seu código com base nas condições especificadas.
+
+
+
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="">
+        <label for="idIdade">Idade</label><br>
+        <input type="number" name="nmIdade" id="idIdade">
+        <br><br>
+        <label for="idAltura">Altura</label><br>
+        <input type="number" name="nmAltura" id="idAltura" step="0.01">
+        <br><br>
+        <input type="radio" name="nmGenero" id="idFem" checked>
+        <label for="idFem">Feminino</label>
+        <input type="radio" name="nmGenero" id="idMasc">
+        <label for="idMasc">Maculino</label>
+        <input type="radio" name="nmGenero" id="idNaoBinario">
+        <label for="idNaoBinario">Nao Binario</label>
+
+
+        <br><br>
+        <output id="idOut">Peso Ideal: </output>
+        <br><br>
+        <input type="Button" value="Calcular Peso Ideal" onclick="calcularPesoIdeal()">
+        <input type="Button" value="Testar Genero" onclick="testarGenero()">
+        <input type="Button" value="Testar Alistamento" onclick="testaServicoMilitar()">
+
+        <br><br>
+        <input type="number" id="idMenu" name="nmMenu">
+        <br>
+        <br>
+        <input type="button" value="Testar Estruturas Seleção" onclick="exemplosEstruturasSelecao()">
+
+    </form>
+
+    <script>
+
+        function exemplosEstruturasSelecao() {
+            //Estrutura de seleção simples
+            var idade = 18
+            if (idade > 18) {
+                console.log("é maior de idade");
+            }
+
+            //Estrutura de Seleção composta  && -> AND  || -> OR   ! -> NOT
+            var num = 25
+            if (num < 10 || (num > 23 && num < 50)) {
+                console.log("o numero é menor que 10 ou está no intervalo entre 23 e 50");
+            }
+
+            var temperatura = 40 
+            var umidade = 22
+            if (temperatura >= 38 && umidade < 25) {
+                //entra aqui se resultado da expressão = Verdadeiro 
+                console.log("Temperatura >= 38 e umidade < 25%");
+            } else {
+                //entra aqui se resultado da expressão = Falso
+                console.log("Caiu aqui por que o resultado da expressão lógica deu falso");
+            }
+
+            //Estrutura de seleção encadeada 
+            var menu = 3//document.getElementById("idMenu").value
+            if (menu == 0) {
+                console.log("Opcao 0 selecionada");
+            } else {
+                if (menu == 1) {
+                    console.log("Opcao 1 selecionada");
+                } else {
+                    if (menu == 2) {
+                        console.log("Opcao 2 selecionada");
+                    } else {
+                        if (menu == 3) {
+                            console.log("Opcao 3 selecionada");
+                        } else {
+                            console.log("Opção Inválida")
+                        }
+                    }
+                }
+                
+            }
+
+            //Estrutura de seleção encadeada usando IF-ELSE-IF
+            if (menu == 0) {
+                console.log("Opcao 0 selecionada");
+            } else if (menu == 1) {
+                console.log("Opcao 1 selecionada");
+            } else if (menu == 2) {
+                console.log("Opcao 2 selecionada");
+            } else if (menu == 3) {
+                console.log("Opcao 3 selecionada");
+            } else {
+                console.log("Opção Inválida")
+            }
+    
+            //switch-case {
+            //ESCOLHA (menu)
+            switch (menu) {
+                //CASO 0: 
+                case 0:
+                    console.log(" - Opcao 0 selecionada");
+                    break;
+            
+                case 1:
+                    console.log(" - Opcao 1 selecionada");
+                    break;
+
+                case 2:
+                    console.log(" - Opcao 2 selecionada");
+                    break;
+
+                case 3:
+                    console.log(" - Opcao 3 selecionada");
+                    break;
+
+                default:
+                    console.log(" - Opção Inválida");
+                    break;
+            }
+
+            //Ternário 
+            var opcao = (menu == 0)? "ternario falso" : "ternario falso"
+            console.log(opcao);
+
+    
+        }
+
+
+
+
+        function calcularXYZ() {
+            console.log("Passou pela Function...");
+        }
+
+        function testarGenero() {
+            let masculino = document.getElementById("idMasc").checked
+            let feminino = document.getElementById("idFem").checked
+            let lgbt = document.getElementById("idNaoBinario").checked
+
+            if (masculino == true) {
+                console.log("o genero masculino está selecionado");
+            }
+
+            if (feminino == true) {
+                console.log("o genero feminino está selecionado");
+            }
+
+            if (lgbt == true) {
+                console.log("o genero nao binário está selecionado");
+            }
+
+
+            if (masculino == true) {
+                console.log("o genero masculino está selecionado");
+            } else {
+                if (feminino == true) {
+                    console.log("o genero feminino está selecionado");
+                } else {
+                    console.log("o genero nao binário está selecionado");
+                }
+            }
+
+
+            if (masculino == true) {
+                console.log("o genero masculino está selecionado");
+            } else if (feminino == true) {
+                console.log("o genero feminino está selecionado");
+            } else {
+                console.log("o genero nao binário está selecionado");
+            }
+
+        }
+
+        function calcularPesoIdeal() {
+            let masculino = document.getElementById("idMasc").checked
+            let feminino = document.getElementById("idFem").checked
+            let altura = Number(document.getElementById("idAltura").value)
+
+            let pesoIdeal
+
+            if (masculino == true) {
+                pesoIdeal = (72.7 * altura) - 58
+            } else {
+                pesoIdeal = (62.1 * altura) - 44.7
+            }
+
+            document.getElementById("idOut").value = "Peso Ideal: " + pesoIdeal.toFixed(2)
+        }
+
+
+    </script>
+
+</body>
+
+</html>
+```
