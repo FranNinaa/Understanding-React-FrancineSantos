@@ -1,7 +1,7 @@
 # Boas Práticas na Programação
 O emprego de boas práticas melhora a qualidade do código, ajuda a condicionar o raciocínio lógico e aumenta a produtividade!
 
-### 1. Indentação é obrigatória
+## 1. Indentação é obrigatória
 Indentar corretamente o código é fundamental. A indentação não deve ser vista como uma "muleta", mas sim como uma prática que auxilia nosso cérebro a pensar de forma estruturada. É importante realizar a indentação enquanto o código está sendo construído, o que facilita a leitura e compreensão da lógica do programa.
 
 Exemplo em JavaScript:
@@ -22,7 +22,7 @@ function myFunction() {
 }
 ```
 
-### 2. Nomes de variáveis, funções, procedimentos e parâmetros
+## 2. Nomes de variáveis, funções, procedimentos e parâmetros
 Os nomes devem ser precisos e expressivos, transmitindo claramente a ideia central. Nomes extensos são aceitáveis se refletirem com precisão a função ou o parâmetro em questão.
 
 Exemplo em JavaScript:
@@ -35,7 +35,7 @@ let x = 10;
 let numeroDeEstudantes = 10;
 ```
 
-### 3. Comentários
+## 3. Comentários
 Comentários são essenciais para explicar o que um trecho de código faz. Recomenda-se criar os comentários antes do código, descrevendo o passo a passo que o código deverá seguir para alcançar o resultado, e depois preencher esse passo a passo com o código.
 
 Exemplo em JavaScript:
@@ -54,7 +54,7 @@ function calcularSoma(x, y) {
 }
 ```
 
-#### 4. Prefira um código legível (de fácil leitura) a um código "menos verboso"
+### 4. Prefira um código legível (de fácil leitura) a um código "menos verboso"
 O código fonte é escrito para seres humanos, portanto, priorize a clareza e legibilidade. Evite códigos excessivamente compactos que dificultem a compreensão.
 
 Exemplo em JavaScript:
@@ -67,13 +67,13 @@ const result = a+b*c;
 const resultado = a + (b * c);
 ```
 
-#### 5. Use e Abuse do Ctrl+C, Ctrl+V e do auto-complete da IDE
+### 5. Use e Abuse do Ctrl+C, Ctrl+V e do auto-complete da IDE
 Aproveite as ferramentas disponíveis, como o uso do atalho de copiar e colar (Ctrl+C, Ctrl+V) e o auto-complete da IDE. Essas ferramentas ajudam a evitar erros de digitação e aumentam a produtividade durante o desenvolvimento.
 
-### 6. Não deixe para testar apenas no final
+## 6. Não deixe para testar apenas no final
 É fundamental testar o programa à medida que cada pequena funcionalidade é criada. Realize testes frequentes, mesmo entre pequenas alterações, para identificar e corrigir eventuais problemas de forma proativa.
 
-### 7. Padronização de código
+## 7. Padronização de código
 Adote um estilo de codificação consistente em todo o projeto. Isso inclui a formatação, indentação, uso de espaços, e outros aspectos que tornam o código visualmente coeso.
 
 Exemplo em JavaScript:
@@ -123,7 +123,7 @@ function processarDadosInvalidos(dados) {
 }
 ```
 
-5. Gestão de exceções adequada
+## 9. Gestão de exceções adequada
 Manuseie exceções de forma apropriada, fornecendo mensagens de erro úteis e capturando apenas as exceções necessárias para o contexto. Evite capturar exceções genéricas.
 
 Exemplo em JavaScript:
