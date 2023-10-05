@@ -144,6 +144,46 @@ try {
 }
 ```
 
+## Sobre o livro Clean Code
+
+"Clean Code: A Handbook of Agile Software Craftsmanship" é um livro escrito por Robert C. Martin, também conhecido como "Uncle Bob". Publicado em 2008, é considerado um livro fundamental para programadores e engenheiros de software que desejam melhorar suas habilidades de escrita de código.
+
+O livro aborda práticas e princípios para escrever código limpo, legível, eficiente e de alta qualidade. O autor defende que o código deve ser escrito de forma que seja fácil de entender, modificar e manter. Ele oferece diretrizes e técnicas específicas para alcançar esses objetivos.
+
+Aqui estão alguns dos principais pontos e tópicos abordados no livro "Clean Code":
+
+### Princípios S.O.L.I.D.:
+
+- Single Responsibility Principle (SRP): Cada classe deve ter uma única razão para mudar.
+- Open/Closed Principle (OCP): As entidades de software (classes, módulos, funções) devem estar abertas para extensão, mas fechadas para modificação.
+- Liskov Substitution Principle (LSP): Os objetos de um programa devem ser substituíveis por instâncias de suas subclasses sem afetar a corretude do programa.
+- Interface Segregation Principle (ISP): Muitas interfaces de cliente específicas são melhores do que uma para todos os clientes.
+- Dependency Inversion Principle (DIP): Dependa de abstrações, não de implementações.
+Nomes Significativos:
+
+- Escolha nomes descritivos e que revelem a intenção do código.
+Evite nomes confusos ou ambíguos.
+### Funções:
+
+- Devem ser curtas e fazer uma coisa apenas.
+Evite efeitos colaterais e variáveis globais.
+Use argumentos significativos.
+### Comentários:
+
+- O código bem escrito raramente precisa de comentários para explicação.
+Prefira expressões e funções autoexplicativas.
+## Formatação:
+
+- Mantenha uma formatação consistente e limpa.
+Use indentação e espaçamento apropriados.
+### Testes:
+
+- Escreva testes automatizados para verificar a funcionalidade do código.
+
+- Use a técnica de Desenvolvimento Orientado a Testes (TDD).
+
+### "Clean Code" é amplamente considerado um clássico na área de desenvolvimento de software e é recomendado para desenvolvedores de todos os níveis de experiência. Ele não apenas oferece diretrizes práticas, mas também promove uma mentalidade e uma cultura de código limpo e bem estruturado. É uma leitura valiosa para qualquer pessoa interessada em melhorar suas habilidades de codificação e tornar o código mais compreensível e sustentável.
+
 ## Conclusão
 Adotar boas práticas na programação é fundamental para garantir a qualidade e a manutenibilidade do código. Ao seguir essas diretrizes, você estará no caminho certo para produzir código limpo, legível e de alta qualidade em JavaScript.
 A aplicação dessas boas práticas na programação contribui para o desenvolvimento de código mais robusto, legível e fácil de manter. Além disso, ao seguir essas diretrizes, os programadores podem melhorar a eficiência e a produtividade durante o processo de desenvolvimento de software.
