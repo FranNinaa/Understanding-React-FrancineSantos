@@ -1274,3 +1274,161 @@ Essas estruturas de repetição são fundamentais para criar iterações e autom
 </body>
 </html>
 ```
+## Estrutura de Dados Vetor 
+
+Em JavaScript, o termo "vetor" é frequentemente utilizado para se referir a arrays. Um array é uma estrutura de dados que permite armazenar vários elementos sob um único nome, cada um identificado por um índice ou uma chave. Os arrays em JavaScript são dinâmicos, o que significa que podem crescer ou diminuir de tamanho durante a execução do programa.
+
+Vamos discutir algumas características e operações relacionadas a arrays em JavaScript
+
+### Declaração de um Array:
+ Para declarar um array em JavaScript, você pode usar a seguinte sintaxe:
+
+```javascript
+const meuArray = [];  // Array vazio
+const outroArray = [1, 2, 3, 4, 5];  // Array com elementos
+```
+
+### Acesso a Elementos:
+Os elementos de um array podem ser acessados usando seus índices, que começam em 0 para o primeiro elemento. Por exemplo:
+
+```javascript
+const meuArray = ['a', 'b', 'c'];
+console.log(meuArray[0]);  // Saída: 'a'
+console.log(meuArray[2]);  // Saída: 'c'
+```
+
+### Tamanho do Array:
+ Você pode obter o tamanho de um array (número de elementos) usando a propriedade length:
+
+```javascript
+const meuArray = [10, 20, 30];
+console.log(meuArray.length);  // Saída: 3
+```
+
+### Adicionar e Remover Elementos:
+
+Para adicionar elementos ao final de um array, você pode usar o método push:
+```javascript
+meuArray.push(40);  // Adiciona 40 ao final do array
+```
+
+
+- Para remover o último elemento de um array, você pode usar o método pop:
+
+```javascript
+meuArray.pop();  // Remove o último elemento do array
+```
+
+### Iteração sobre um Array:
+Você pode usar estruturas de repetição, como for, for...of ou forEach, para iterar sobre os elementos de um array e realizar operações em cada elemento.
+
+### Arrays Multidimensionais:
+Em JavaScript, você pode criar arrays multidimensionais (arrays de arrays), permitindo a representação de estruturas de dados mais complexas, como matrizes. Por exemplo:
+
+```javascript
+const matriz = [[1, 2, 3], [4, 5, 6], [7, 8, 9]];
+console.log(matriz[1][0]);  // Acessando o elemento 4
+```
+
+Essas são apenas algumas operações e conceitos básicos relacionados a arrays em JavaScript. Os arrays são uma parte essencial da programação e são usados para armazenar e manipular coleções de dados de maneira eficaz e flexível.
+
+### Exemplo feito em Aula
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        //Array vazio 
+        var carro = []
+
+        //Array pré inicializado (vetor, coleção, pilha, fila, lista)
+        const fruta = ['laranja', 'morango', 'abacate']
+        console.log(fruta);
+
+        //Declarando um array usando o construtor da classe Array 
+        let legumes = new Array('brócolis', 'cenoura', 'alface')
+
+
+        //Acessando posições especificas do array
+        var frutaCitrica = fruta[2]
+        console.log("fruta Citrica: " + frutaCitrica);
+
+        fruta[3] = "limao"
+        fruta[4] = "fisalis"
+        fruta[6] = "melancia"
+        console.log(fruta);
+        console.log(fruta[0]);
+        console.log(fruta[1]);
+        console.log(fruta[2]);
+        console.log(fruta[3]);
+        console.log(fruta[4]);
+
+        //Tamanho do Array 
+        console.log("Tamanho do Array: " + fruta.length);
+
+
+        //Inserindo um novo elemento no final do array
+        fruta[fruta.length] = "melão"
+        fruta.push("Amora")
+
+
+        //Inserindo um novo elemento no inicio do array
+        fruta.unshift("Banana")
+        
+        //Tirar Elementos do começo do array 
+        var fruta3 = fruta.shift()
+        console.log("fruta 3 --> " + fruta3);
+
+
+        //Tirar Elementos do Final do array 
+        var fruta4 = fruta.pop()
+        console.log("fruta 4 --> " + fruta4);
+
+        console.log("---------------------------");
+        console.log(fruta);
+
+        //Construindo Fila vs Pilha  (pop, shift, unshift, push)
+        //Fila - o primeiro elemento que entra é primeiro a sair 
+        //Pilha - O último elemento a entrar é primeiro a sair 
+
+        //Iterando um Array 
+        for (let index = 0; index < fruta.length; index++) {
+            let element = fruta[index];
+            console.log(fruta[index]);
+            console.log("Fruta[" + index + "] -> " + element);
+        }
+
+        //Exibindo o array inteiro no console 
+        console.log(fruta);
+        console.log(fruta.toString());
+        console.table(fruta);
+
+
+
+        //Passando a referencia de fruta para fruta2
+        var fruta2 = fruta
+
+        fruta[2] = "Limão"
+        console.log(fruta);
+        console.log(fruta2);
+
+        var texto = "123"
+        //Passando o valor de texto para texto2 
+        var texto2 = texto
+
+
+    </script>
+</body>
+
+</html>
+
+```
