@@ -854,3 +854,423 @@ Essas são as estruturas de seleção simples e compostas em JavaScript, que sã
 
 </html>
 ```
+## Estruturas de Seleção em JS
+
+As estruturas de seleção em JavaScript permitem que um programa execute diferentes blocos de código com base em condições específicas. As estruturas mais comuns são o if, else if e else. Abaixo, vou explicar cada uma delas em detalhes:
+
+- if => A estrutura if é usada para executar um bloco de código se uma condição for verdadeira. Se a condição for falsa, o bloco de código dentro do if não será executado. A sintaxe é a seguinte:
+
+```javascript
+if (condicao) {
+    // Código a ser executado se a condição for verdadeira
+}
+```
+- else => A estrutura else é usada em conjunto com if para executar um bloco de código se a condição for falsa. Se a condição for verdadeira, o bloco de código dentro do else não será executado. A sintaxe é a seguinte:
+
+```javascript
+if (condicao) {
+    // Código a ser executado se a condição for verdadeira
+} else {
+    // Código a ser executado se a condição for falsa
+}
+```
+
+- else if => A estrutura else if permite verificar múltiplas condições em sequência. Se a primeira condição for falsa, ele verifica a próxima condição e assim por diante. O bloco de código dentro do primeiro if ou else if que tiver uma condição verdadeira será executado, e o restante será ignorado. A sintaxe é a seguinte:
+
+```javascript
+if (condicao1) {
+    // Código a ser executado se a condição1 for verdadeira
+} else if (condicao2) {
+    // Código a ser executado se a condição2 for verdadeira
+} else {
+    // Código a ser executado se nenhuma das condições for verdadeira
+}
+```
+#### Aqui está um exemplo que combina todas essas estruturas:
+
+```javascript
+var idade = 18;
+
+if (idade < 18) {
+    console.log("Menor de idade");
+} else if (idade >= 18 && idade < 65) {
+    console.log("Adulto");
+} else {
+    console.log("Idoso");
+}
+```
+- Neste exemplo, o código verifica a idade e imprime uma mensagem dependendo da faixa etária.
+
+### Exemplo feito em aula
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="">
+        <label for="idIdade">Idade</label><br>
+        <input type="number" name="nmIdade" id="idIdade">
+        <br><br>
+        <label for="idAltura">Altura</label><br>
+        <input type="number" name="nmAltura" id="idAltura" step="0.01">
+        <br><br>
+        <input type="radio" name="nmGenero" id="idFem" checked>
+        <label for="idFem">Feminino</label>
+        <input type="radio" name="nmGenero" id="idMasc">
+        <label for="idMasc">Maculino</label>
+        <input type="radio" name="nmGenero" id="idNaoBinario">
+        <label for="idNaoBinario">Nao Binario</label>
+
+
+        <br><br>
+        <output id="idOut">Peso Ideal: </output>
+        <br><br>
+        <input type="Button" value="Calcular Peso Ideal" onclick="calcularPesoIdeal()">
+        <input type="Button" value="Testar Genero" onclick="testarGenero()">
+        <input type="Button" value="Testar Alistamento" onclick="testaServicoMilitar()">
+
+        <br><br>
+        <input type="number" id="idMenu" name="nmMenu">
+        <br>
+        <br>
+        <input type="button" value="Testar Estruturas Seleção" onclick="exemplosEstruturasSelecao()">
+
+    </form>
+    <script>
+        function exemplosEstruturasSelecao() {
+            //Estrutura de seleção simples
+            var idade = 18
+            if (idade > 18) {
+                console.log("é maior de idade");
+            }
+
+            //Estrutura de Seleção composta  && -> AND  || -> OR   ! -> NOT
+            var num = 25
+            if (num < 10 || (num > 23 && num < 50)) {
+                console.log("o numero é menor que 10 ou está no intervalo entre 23 e 50");
+            }
+
+            var temperatura = 40 
+            var umidade = 22
+            if (temperatura >= 38 && umidade < 25) {
+                //entra aqui se resultado da expressão = Verdadeiro 
+                console.log("Temperatura >= 38 e umidade < 25%");
+            } else {
+                //entra aqui se resultado da expressão = Falso
+                console.log("Caiu aqui por que o resultado da expressão lógica deu falso");
+            }
+
+            //Estrutura de seleção encadeada 
+            var menu = 3//document.getElementById("idMenu").value
+            if (menu == 0) {
+                console.log("Opcao 0 selecionada");
+            } else {
+                if (menu == 1) {
+                    console.log("Opcao 1 selecionada");
+                } else {
+                    if (menu == 2) {
+                        console.log("Opcao 2 selecionada");
+                    } else {
+                        if (menu == 3) {
+                            console.log("Opcao 3 selecionada");
+                        } else {
+                            console.log("Opção Inválida")
+                        }
+                    }
+                }
+                
+            }
+
+            //Estrutura de seleção encadeada usando IF-ELSE-IF
+            if (menu == 0) {
+                console.log("Opcao 0 selecionada");
+            } else if (menu == 1) {
+                console.log("Opcao 1 selecionada");
+            } else if (menu == 2) {
+                console.log("Opcao 2 selecionada");
+            } else if (menu == 3) {
+                console.log("Opcao 3 selecionada");
+            } else {
+                console.log("Opção Inválida")
+            }
+    
+            //switch-case {
+            //ESCOLHA (menu)
+            switch (menu) {
+                //CASO 0: 
+                case 0:
+                    console.log(" - Opcao 0 selecionada");
+                    break;
+            
+                case 1:
+                    console.log(" - Opcao 1 selecionada");
+                    break;
+
+                case 2:
+                    console.log(" - Opcao 2 selecionada");
+                    break;
+
+                case 3:
+                    console.log(" - Opcao 3 selecionada");
+                    break;
+
+                default:
+                    console.log(" - Opção Inválida");
+                    break;
+            }
+
+            //Ternário 
+            var opcao = (menu == 0)? "ternario falso" : "ternario falso"
+            console.log(opcao);
+
+    
+        }
+
+        function calcularXYZ() {
+            console.log("Passou pela Function...");
+        }
+
+        function testarGenero() {
+            let masculino = document.getElementById("idMasc").checked
+            let feminino = document.getElementById("idFem").checked
+            let lgbt = document.getElementById("idNaoBinario").checked
+
+            if (masculino == true) {
+                console.log("o genero masculino está selecionado");
+            }
+
+            if (feminino == true) {
+                console.log("o genero feminino está selecionado");
+            }
+
+            if (lgbt == true) {
+                console.log("o genero nao binário está selecionado");
+            }
+
+
+            if (masculino == true) {
+                console.log("o genero masculino está selecionado");
+            } else {
+                if (feminino == true) {
+                    console.log("o genero feminino está selecionado");
+                } else {
+                    console.log("o genero nao binário está selecionado");
+                }
+            }
+
+
+            if (masculino == true) {
+                console.log("o genero masculino está selecionado");
+            } else if (feminino == true) {
+                console.log("o genero feminino está selecionado");
+            } else {
+                console.log("o genero nao binário está selecionado");
+            }
+
+        }
+
+        function calcularPesoIdeal() {
+            let masculino = document.getElementById("idMasc").checked
+            let feminino = document.getElementById("idFem").checked
+            let altura = Number(document.getElementById("idAltura").value)
+
+            let pesoIdeal
+
+            if (masculino == true) {
+                pesoIdeal = (72.7 * altura) - 58
+            } else {
+                pesoIdeal = (62.1 * altura) - 44.7
+            }
+
+            document.getElementById("idOut").value = "Peso Ideal: " + pesoIdeal.toFixed(2)
+        }
+
+
+    </script>
+
+</body>
+
+</html>
+```
+## Estruturas de Repetição 
+
+Em JavaScript, as estruturas de repetição são usadas para executar um bloco de código várias vezes, com base em uma condição específica. Existem várias formas de implementar loops em JavaScript, incluindo for, while, do-while e for...of. Vou explicar cada uma delas em detalhes:
+
+- for = A estrutura for é uma maneira comum de executar um bloco de código um número específico de vezes. A sintaxe é a seguinte:
+
+```javascript
+for (inicialização; condição; incremento) {
+    // Código a ser executado em cada iteração
+}
+```
+
+### Exemplo:
+
+```javascript
+for (let i = 0; i < 5; i++) {
+    console.log(i);
+}
+```
+
+- while = A estrutura while é usada para executar um bloco de código enquanto uma condição é verdadeira. A sintaxe é a seguinte:
+
+```javascript
+while (condição) {
+    // Código a ser executado enquanto a condição for verdadeira
+}
+```
+
+### Exemplo:
+
+```javascript
+let contador = 0;
+while (contador < 5) {
+    console.log(contador);
+    contador++;
+}
+```
+
+- do-while = A estrutura do-while é semelhante ao while, mas garante que o bloco de código seja executado pelo menos uma vez, mesmo que a condição seja falsa. A sintaxe é a seguinte:
+
+```javascript
+do {
+    // Código a ser executado
+} while (condição);
+
+```
+
+### Exemplo:
+
+```javascript
+let contador = 0;
+do {
+    console.log(contador);
+    contador++;
+} while (contador < 5);
+```
+
+- for...of = A estrutura for...of é usada para iterar sobre elementos de uma coleção (por exemplo, arrays, strings, etc.). A sintaxe é a seguinte:
+
+```javascript
+for (variavel of colecao) {
+    // Código a ser executado para cada elemento da coleção
+}
+```
+
+### Exemplo:
+
+```javascript
+const nomes = ['Alice', 'Bob', 'Charlie'];
+for (const nome of nomes) {
+    console.log(nome);
+}
+```
+
+- switch...case = A estrutura switch...case permite avaliar uma expressão e executar diferentes blocos de código com base no valor da expressão. A sintaxe é a seguinte:
+
+```javascript
+switch (expressao) {
+    case valor1:
+        // Código a ser executado se a expressao for igual a valor1
+        break;
+    case valor2:
+        // Código a ser executado se a expressao for igual a valor2
+        break;
+    // ...
+    default:
+        // Código a ser executado se a expressao não corresponder a nenhum valor
+}
+```
+
+### Exemplo:
+
+```javascript
+let diaSemana = 3;
+let mensagem;
+
+switch (diaSemana) {
+    case 1:
+        mensagem = "Domingo";
+        break;
+    case 2:
+        mensagem = "Segunda-feira";
+        break;
+    case 3:
+        mensagem = "Terça-feira";
+        break;
+    case 4:
+        mensagem = "Quarta-feira";
+        break;
+    case 5:
+        mensagem = "Quinta-feira";
+        break;
+    case 6:
+        mensagem = "Sexta-feira";
+        break;
+    case 7:
+        mensagem = "Sábado";
+        break;
+    default:
+        mensagem = "Dia inválido";
+}
+
+console.log(mensagem);
+
+```
+
+- Este é um exemplo simples que exibe o nome do dia da semana com base no número fornecido.
+
+Essas estruturas de repetição são fundamentais para criar iterações e automatizar tarefas que requerem processamento repetitivo de dados. A escolha da estrutura de repetição depende do problema específico que você está resolvendo e da lógica necessária para iterar sobre os dados.
+
+### Exemplo feito em aula
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        var contador = 10 
+        //Enquanto  - usado quando não sabemos a qtd de vezes
+        console.log("Antes do While");
+        while (contador < 10) {
+            contador++
+            console.log("while " + contador);
+        }
+        console.log("Depois do While");
+
+
+
+        //Faça Enquanto - se precisar executar pelo uma vez
+        //contador = 0 
+        console.log("Antes do do-While");
+        do { //iteração = 1 passada dentro da estrura 
+            contador++
+            console.log("do-while " + contador);
+        } while (contador < 10);
+        console.log("Depois do do-While");
+
+
+        //Para - usado quando sabemos exatamente quantas vezes
+        console.log("Antes do For");
+        for (let i = 0; i> 10; i++) {
+            console.log("For: " + i);
+        }
+
+    </script>
+    
+</body>
+</html>
+```
