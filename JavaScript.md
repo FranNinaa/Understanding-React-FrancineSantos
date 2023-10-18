@@ -1432,3 +1432,591 @@ Essas são apenas algumas operações e conceitos básicos relacionados a arrays
 </html>
 
 ```
+## Funções em JavaScript
+Em JavaScript, uma função é um bloco de código reutilizável que realiza uma tarefa específica. As funções são essenciais para organizar e modularizar o código.
+
+### Sintaxe Básica
+Aqui está a sintaxe básica para declarar uma função em JavaScript:
+
+```javascript
+function nomeDaFuncao(parametro1, parametro2) {
+  // Corpo da função
+  // Código para executar a tarefa
+  // Pode retornar um valor usando a palavra-chave "return"
+}
+```
+
+- nomeDaFuncao: Nome dado à função.
+- parametro1, parametro2: Parâmetros que a função pode receber (opcionais).
+#### Exemplo de Função Simples
+Aqui está um exemplo de uma função simples que retorna a soma de dois números:
+```javascript
+function soma(a, b) {
+  return a + b;
+}
+
+const resultado = soma(5, 3); // Chama a função e atribui o resultado a uma variável
+console.log(resultado); // Saída: 8
+```
+
+#### Chamando uma Função
+Para chamar (ou executar) uma função, você usa o nome da função seguido pelos parâmetros entre parênteses.
+
+- Funções Anônimas e Expressões de Função
+Além da sintaxe padrão, você pode definir funções de forma anônima e atribuí-las a variáveis (expressões de função). Aqui está um exemplo:
+
+```javascript
+const multiplicacao = function(a, b) {
+  return a * b;
+};
+
+const resultadoMultiplicacao = multiplicacao(4, 2);
+console.log(resultadoMultiplicacao); // Saída: 8
+```
+
+- Arrow Functions
+Arrow functions são uma forma mais concisa de escrever funções em JavaScript. Aqui está um exemplo:
+```javascript
+const subtracao = (a, b) => a - b;
+
+const resultadoSubtracao = subtracao(10, 5);
+console.log(resultadoSubtracao); // Saída: 5
+```
+### Exemplo feito em aula
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+        //linha 1
+        //linha 2
+        //var genero = document.getElementById()
+
+        var pesoIdealF = calcularPesoIdeal("f", 1.60)
+        console.log(pesoIdealF);
+
+        pesoIdealM = calcularPesoIdeal("m", 1.60)
+        console.log(pesoIdealM);
+
+        /*
+                Funções são "Tarefas"/"Ações" executadas assim que são chamadas ou em 
+                decorrencia de algum evento.
+                Uma função pode receber parâmetros e retornar um resultado. Veja um exemplo 
+                completo abaixo. 
+
+                Paradigma: "Programação Estruturada"
+
+        */
+
+        //Escopo da Função... 
+        var x1 = 2 //Assinatura da váriavel  nome=referencia, endereço, tipo, conteúdo
+        var x2 = 3
+        function teste(x1) {
+            let x2 = 6
+            return x1 + x2
+        }
+
+        console.log(teste(5));
+        /*
+        Toda função pode ter: 
+        * Uma chamada (chamada para executar a função)
+        * Parametros (opcional) - No Exemplo acima, genero e altura são os parâmetros
+        * Ação (O processamento no interior da função) - No exemplo, o cálculo do peso ideal... 
+        * Retorno (opcional) - (O valor resultante do Processamento) - No exemplo, o pesoIdeal está sendo retornado
+        */
+
+        //Função Nomeada
+        function calcularPesoIdeal(genero, altura) {
+
+            let pesoIdeal = 0
+            if (genero == "f") {
+                pesoIdeal = (62.1 * altura) - 44.7
+            } else {
+                pesoIdeal = (72.7 * altura) - 58
+            }
+
+            return pesoIdeal
+        }
+
+
+
+
+        /*
+           Funções Anônimas ou Funções de expressão (Functions expression)
+           ----------------
+            Como o próprio nome diz, são funções sem nome. 
+            O JavaScript é uma linguagem Funcional. Uma das caracteristicas do paradigma funcional 
+            é poder atribuir funções a variáveis.   
+        */
+
+
+
+        var pesoIdeal2 = function (genero, altura) {
+
+            let pesoIdeal = 0
+            if (genero == "f") {
+                pesoIdeal = (62.1 * altura) - 44.7
+            } else {
+                pesoIdeal = (72.7 * altura) - 58
+            }
+
+            return pesoIdeal
+        }
+
+        console.log("peso Ideal 2 : " + pesoIdeal2("f", 1.57));
+
+        //------------------------------------------------------------------------------------------------------------
+        /* 
+           Funções Seta (Arrow Function) 
+           ----------------
+        */
+        var pesoIdeal3 = (genero, altura) => { //arrow 
+
+            let pesoIdeal = 0
+            if (genero == "f") {
+                pesoIdeal = (62.1 * altura) - 44.7
+            } else {
+                pesoIdeal = (72.7 * altura) - 58
+            }
+
+            return pesoIdeal
+        }
+
+        /*
+            Arrow Function - Forma abreviada
+            -------------------------------
+            Se houver apenas um parâmetro, pode-se suprimir os parênteses
+            Se houver apenas uma linha de instrução, pode-se suprimir as 
+            chaves e o return será implícito
+        */
+        var dobro = num => num * 2
+        console.log(dobro(5));
+
+
+        /* Exemplo exagerado de más práticas...
+        var num1 = 3
+        var resultado = ((num1 % 2) == 0) ? num1 => num1 * 2 : (num1 < 0) ? num1 => num1 * -1 : num1 => num1 * 3
+        console.log("aqui " + resultado(-3));
+        */
+
+
+        /*
+        var vetor = [1,2,3]
+        vetor.forEach(element => {
+            
+        });
+        */
+        //------------------------------------------------------------------------------------------------------------
+        /* 
+           Funções Auto-Executável/Auto-Invocável
+           ----------------
+        */
+
+        (function(){
+            console.log("Executou...");
+        })()
+
+        //teste()
+
+
+    </script>
+</body>
+
+</html>
+```
+
+#### As arrow functions têm uma sintaxe mais compacta e, em muitos casos, substituem as expressões de função.
+
+## Tratamento de Eventos em JavaScript
+O tratamento de eventos é um aspecto fundamental no desenvolvimento web, permitindo que páginas da web interajam com os usuários. Em JavaScript, os eventos são ações que ocorrem no navegador, como clicar em um botão, enviar um formulário ou mover o mouse.
+
+### Adicionando Event Listeners
+Para tratar eventos em JavaScript, usamos Event Listeners (ou "ouvintes de eventos"). Eles são usados para "ouvir" um evento específico em um elemento HTML e executar uma ação quando esse evento ocorre.
+
+-Aqui está a sintaxe básica para adicionar um Event Listener a um elemento:
+
+```javascript
+const meuElemento = document.getElementById('meuId');
+
+meuElemento.addEventListener('nomeDoEvento', (event) => {
+  // Código a ser executado quando o evento ocorrer
+});
+```
+
+**meuId**: É o ID do elemento HTML ao qual você deseja adicionar o Event Listener.
+**nomeDoEvento**: É o nome do evento que você deseja ouvir, como "click", "mouseover", "submit", etc.
+
+#### Exemplo de Event Listener
+Aqui está um exemplo de como adicionar um Event Listener para o evento de clique em um botão:
+
+```javascript
+const meuBotao = document.getElementById('meuBotao');
+
+meuBotao.addEventListener('click', () => {
+  alert('Botão clicado!');
+});
+```
+
+- Neste exemplo, quando o botão com o ID "meuBotao" é clicado, exibirá um alerta com a mensagem "Botão clicado!".
+
+#### Event Object (Objeto de Evento)
+Dentro da função do Event Listener, você pode acessar um objeto de evento que contém informações sobre o evento, como o elemento alvo, coordenadas do mouse, teclas pressionadas, etc. Geralmente, esse objeto é chamado de event.
+
+```javascript
+meuElemento.addEventListener('nomeDoEvento', (event) => {
+  console.log('Evento ocorreu no elemento:', event.target);
+});
+```
+
+- No exemplo acima, estamos imprimindo o elemento alvo do evento no console.
+
+#### Removendo Event Listeners
+- Para remover um Event Listener, você usa o método removeEventListener.
+
+```javascript
+meuElemento.removeEventListener('nomeDoEvento', minhaFuncaoDeTratamentoDeEvento);
+```
+
+### Exemplos feito em aula
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" method="get">
+        <input type="email"  name="nmEmail" id="idEmail">
+        <input type="button" id="idBotao" value="CLique Me" onclick="testarClique()">
+
+        <input type="button" id="idBotao2" value="CLique Me 2">
+        <input type="button" id="idBotao3" value="CLique Me 3">
+        <input type="submit" id="idBotao4">
+
+      
+    </form>
+
+    <script>
+
+        //função chamada em Event Handler Inline (má Prática)
+        function testarClique() {
+            console.log("Clicou em clique me!!!");
+        }
+
+        //Event Handler Nível 1 
+        var botao = document.getElementById("idBotao2")
+
+        console.log(botao);
+
+        botao.onclick = tratamentoBotao2
+
+        function tratamentoBotao2() {
+            console.log("Clicou Botão 2");  
+        }
+
+        //usando função anonima... 
+        botao.ondblclick = function() {
+            console.log("Clique duplo em Botao 2");
+        }
+
+        botao.onmouseover = function(){
+            console.log("Passou o mause por cima do botão 2");
+        }
+
+        //Event Handler Nível 2
+        var botao3 = document.getElementById("idBotao3")
+
+        botao3.addEventListener("click", tratamentoBota3) //função de callback 
+
+        function tratamentoBota3() {
+            console.log("Clicou Botão 3");  
+        }
+
+        botao3.addEventListener("mouseover", function(){
+            console.log("Clique duplo no botao 3");
+        })
+
+        const botao4 = document.getElementById("idBotao4")
+
+        botao4.addEventListener("click", function(event){
+            event.preventDefault() //previne o comportamento padrao do formulario 
+            console.log(event);
+
+            let email = document.getElementById("idEmail").value
+            console.log("Email: " + email);
+        })
+
+
+    </script>
+    
+</body>
+</html>
+```
+
+## Conclusão
+O tratamento de eventos em JavaScript é crucial para criar interatividade em páginas da web. Event Listeners permitem que você responda a ações do usuário e execute ações apropriadas em resposta a essas ações.
+
+## Strings em JavaScript
+Em JavaScript, uma string é uma sequência de caracteres, como texto ou palavras. As strings são usadas para representar e manipular dados de texto em um programa.
+
+### Criando Strings
+Existem várias maneiras de criar strings em JavaScript:
+
+#### Aspas Simples ou Duplas:
+
+```javascript
+const stringComAspasSimples = 'Esta é uma string com aspas simples.';
+const stringComAspasDuplas = "Esta é uma string com aspas duplas.";
+```
+
+#### Template Strings:
+As template strings permitem interpolação de variáveis e expressões usando ${}.
+
+```javascript
+const nome = 'João';
+const saudacao = `Olá, meu nome é ${nome}.`;
+```
+
+#### Acessando Caracteres em uma String
+Você pode acessar caracteres em uma string usando colchetes **[]** e um índice (começando em 0 para o primeiro caractere).
+
+```javascript
+const minhaString = 'Exemplo';
+console.log(minhaString[0]);  // Saída: 'E'
+```
+
+#### Tamanho de uma String
+Para obter o comprimento (número de caracteres) de uma string, você pode usar a propriedade **length**.
+
+```javascript
+const minhaString = 'Exemplo';
+console.log(minhaString.length);  // Saída: 7
+```
+
+#### Métodos de String
+JavaScript oferece diversos métodos para manipulação de strings. Aqui estão alguns exemplos:
+
+- **toUpperCase()** e **toLowerCase()**:
+Transformam os caracteres em maiúsculas ou minúsculas, respectivamente.
+
+```javascript
+const frase = 'Exemplo de String';
+console.log(frase.toUpperCase());  // Saída: 'EXEMPLO DE STRING'
+console.log(frase.toLowerCase());  // Saída: 'exemplo de string'
+```
+
+- **concat()**:
+Concatena duas ou mais strings.
+
+```javascript
+const str1 = 'Olá, ';
+const str2 = 'mundo!';
+const mensagem = str1.concat(str2);
+console.log(mensagem);  // Saída: 'Olá, mundo!'
+```
+
+**indexOf()** e **lastIndexOf()**:
+Retornam a posição do primeiro ou último caractere correspondente em uma string.
+
+```javascript
+const texto = 'Aprendendo JavaScript';
+console.log(texto.indexOf('JavaScript'));  // Saída: 11
+```
+### Exemplos feito em aula
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input type="text" id="idTexto" placeholder="Digite sua Expressão">
+    <input type="button" id="idbtTeste" value="executar Eval" onclick="testarEval()">
+
+    <script>
+
+        const string1 = "A string primitive"; //String literals 
+        const string2 = 'Also a string primitive';
+        const string3 = `Yet another string primitive`;
+
+        const string4 = String(1); 
+        const string5 = String(true);
+        const string6 = String("Teste");
+
+        const string7 = new String("A String object"); //String Object 
+
+        console.log(typeof string1); // "string"
+        console.log(typeof string2); // "string"
+        console.log(typeof string3); // "string"
+        console.log(typeof string4); // "string"
+        console.log(typeof string5); // "string"
+        console.log(typeof string6); // "string"
+        console.log(typeof string7); // "object"
+
+        console.log(string6.valueOf()); // "Teste"
+        console.log(string7.valueOf()); // "A String object"
+
+        //String vs. Array 
+        var gato = "cat"
+        console.log(gato[2]);
+        console.log("cat"[1]);
+        console.log("catwerr".length);
+        console.log("cat".charAt(2));
+
+        //Comparando Strings
+        const a = "a";
+        const b = "b";
+ 
+        // A  B  c d
+        // 65 66 
+        if (a < b) {
+            // true
+            console.log(`${a} is less than ${b}`);
+        } else if (a > b) {
+            console.log(`${a} is greater than ${b}`);
+        } else {
+            console.log(`${a} and ${b} are equal.`);
+        }
+
+
+        const upperA = "A"
+        console.log(a == upperA); //false
+        console.log(a.toLowerCase() == upperA.toLowerCase()); //true
+        console.log(a.toUpperCase() == upperA.toUpperCase()); //true
+        console.log(areEqualCaseInsensitive(a, upperA));
+
+        if (areEqualCaseInsensitive(a, upperA)) {
+            console.log("a é igual A");
+        } else {
+            console.log("a é diferente A");
+        }
+
+        function areEqualCaseInsensitive(str1, str2) {
+            return str1.toLowerCase() === str2.toLowerCase()
+        }
+
+
+        const numUm = 1
+        const charUm = "1" 
+        if (numUm == charUm){
+            console.log("numUm é igual charUm");
+        }else{
+            console.log("numUm é diferente de charUm");
+        }
+
+        if (numUm === charUm){
+            console.log("numUm é igual charUm");
+        }else{
+            console.log("numUm é diferente de charUm");
+        }
+
+        //Strig Template / Template literal
+        const total = 12.4
+        const totalComDesconto = 10.00
+        //console.log("o total da conta é: " + total + ", com desconto fica: " + totalComDesconto)
+        console.log(`o total da conta é: ${total} , com desconto fica: ${totalComDesconto}`);
+
+        var nome = "Joao"
+        //Métodos estáticos de String 
+        console.log(String.fromCharCode(67, 65)); //Retorna o caractere correspondente ao valor ascii informado
+
+        //
+        const texto = "linha 1\nlinha 2"
+        const filePath = String.raw`C:\Development\profile\aboutme.html`
+
+        console.log(`The file was uploaded from: ${filePath}`);
+
+        const filePath2 = "C:\\Development\\profile\\aboutme.html"
+
+        console.log(filePath2);
+
+        //Métodos de instância
+        const texto1 = "texto"
+        const text2 = " 123"
+        console.log(texto1.charAt(2));
+        console.log(texto1.charCodeAt(2));
+        console.log(texto1.concat(text2, " ad", " 12"));
+
+        const str1 = 'Cats are the best!';
+        console.log(str1.endsWith('best!'));
+
+        console.log(str1.endsWith('best', 17));
+
+        const str2 = 'Is this a question?';
+
+        console.log(str2.endsWith('question'));
+
+
+        const sentence = 'The quick brown fox jumps over the lazy dog.';
+        const word = 'fox';
+
+        console.log(sentence.includes(word)); 
+
+        console.log(`The word "${word}" ${sentence.includes(word) ? 'is' : 'is not'} in the sentence`);
+    
+        let text = "Apple, Banana, Kiwi";
+        let part = text.slice(7, 13);
+        console.log(part);
+
+        console.log(text.substring(7, 13));
+        console.log(text.substr(7, 6));
+        
+        let text3 = "Please visit Microsoft!";
+        let newText = text3.replace("Microsoft", "W3Schools");
+
+        console.log(newText);
+
+        let text4 = "Please visit Microsoft!";
+        let newText2 = text4.replace(/MICROSOFT/i, "W3Schools");
+
+        console.log(newText2);
+
+        let text5 = "Please visit Microsoft and Microsoft!";
+        let newText5 = text5.replace(/Microsoft/g, "W3Schools");
+
+        console.log(newText5);
+
+        let text6 = "5";
+        let padded = text6.padStart(4,"1");
+
+        console.log(padded);
+
+        let text7 = "Please, visit, Microsoft, and, Microsoft!";
+        let array7 = text7.split(",")
+
+        console.log(array7);
+
+        //Eval ...
+        let resultado = eval("2 + 2 * 3")
+        console.log(resultado);
+
+
+        function testarEval(){
+            let texto = document.getElementById("idTexto").value
+            let resultado = eval(texto)
+            console.log(`Resul: ${resultado}`);
+        }
+
+
+    </script>
+</body>
+</html>
+```
+## Estes são apenas alguns exemplos de operações com strings em JavaScript. Strings são uma parte fundamental da linguagem e são amplamente utilizadas para manipulação de texto em programas.
