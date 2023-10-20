@@ -117,7 +117,7 @@ O JavaScript permite que os desenvolvedores acessem e manipulem o DOM para criar
 ### Acesso a Elementos do DOM
 Para acessar elementos do DOM em JavaScript, você pode usar métodos como document.getElementById(), document.querySelector(), ou navegando pelos nós da árvore DOM.
 
-Exemplo usando getElementById:
+### Exemplo usando getElementById:
 
 ```javascript
 const elemento = document.getElementById('conteudo');
@@ -184,7 +184,7 @@ Os tipos de dados primitivos são os mais básicos e fundamentais na linguagem. 
 
 ### Number: Representa números, inteiros ou em ponto flutuante.
 
-- Exemplo:
+### Exemplo:
 
 ```javascript
 let numero = 42;
@@ -193,7 +193,7 @@ let pi = 3.14;
 
 ### String: Representa uma sequência de caracteres.
 
-- Exemplo:
+### Exemplo:
 
 ```javascript
 let texto = "Olá, mundo!";
@@ -201,7 +201,7 @@ let texto = "Olá, mundo!";
 
 ### Boolean: Representa um valor lógico, true (verdadeiro) ou false (falso).
 
-- Exemplo:
+### Exemplo:
 
 ```javascript
 let isAtivo = true;
@@ -209,7 +209,7 @@ let isAtivo = true;
 
 ### Undefined: Representa uma variável que foi declarada, mas não foi inicializada com um valor.
 
-- Exemplo:
+### Exemplo:
 
 ```javascript
 let x;
@@ -218,7 +218,7 @@ console.log(x); // Output: undefined
 
 ### Null: Representa a ausência intencional de qualquer valor ou objeto de valor.
 
-- Exemplo:
+### Exemplo:
 
 ```javascript
 let y = null;
@@ -226,7 +226,7 @@ let y = null;
 
 ### Symbol: Introduzido no ECMAScript 6, representa um valor único e imutável usado como chave de propriedade.
 
-- Exemplo:
+### Exemplo:
 
 ```javascript
 const meuSimbolo = Symbol('descrição opcional');
@@ -234,7 +234,7 @@ const meuSimbolo = Symbol('descrição opcional');
 
 ### BigInt: Introduzido no ECMAScript 11, representa inteiros maiores do que 2^53 - 1.
 
-- Exemplo:
+### Exemplo:
 
 ```javascript
 const bigIntValue = 1234567890123456789012345678901234567890n;
@@ -1156,7 +1156,7 @@ do {
 } while (contador < 5);
 ```
 
-- for...of = A estrutura for...of é usada para iterar sobre elementos de uma coleção (por exemplo, arrays, strings, etc.). A sintaxe é a seguinte:
+- **for...of** = A estrutura for...of é usada para iterar sobre elementos de uma coleção (por exemplo, arrays, strings, etc.). A sintaxe é a seguinte:
 
 ```javascript
 for (variavel of colecao) {
@@ -1224,6 +1224,50 @@ switch (diaSemana) {
 console.log(mensagem);
 
 ```
+
+### OBS Diferenças de for..in e for...of
+
+Em JavaScript, **for...of** e **for...in** são duas estruturas de controle usadas para percorrer elementos de um objeto, mas elas têm finalidades diferentes e são usadas em contextos distintos:
+
+- **for...of:**
+
+O **for...of** é usado para iterar sobre elementos iteráveis, como arrays, strings, mapas, conjuntos e objetos semelhantes a arrays (por exemplo, NodeList).
+Ele percorre os valores dos elementos, não os índices ou chaves.
+É mais comumente usado quando você precisa acessar os valores dos elementos de uma coleção.
+Exemplo:
+
+```js
+const colors = ['red', 'green', 'blue'];
+
+for (const color of colors) {
+    console.log(color);
+}
+```
+
+Neste caso, o for...of percorrerá os valores "red", "green" e "blue" no array colors.
+
+- **for...in:**
+
+O **for...in** é usado para iterar sobre as propriedades enumeráveis de um objeto.
+Ele percorre as chaves (nomes das propriedades) em um objeto, permitindo que você acesse as propriedades e seus valores.
+É mais comumente usado para objetos que não são arrays, como objetos literais.
+Exemplo:
+
+```js
+const person = {
+    name: 'John',
+    age: 30,
+    city: 'New York'
+};
+
+for (const key in person) {
+    console.log(key, person[key]);
+}
+```
+
+Neste caso, o for...in percorrerá as chaves "name", "age" e "city" no objeto person, permitindo que você acesse os valores associados a essas chaves.
+
+Portanto, a principal diferença entre for...of e for...in é que o primeiro é usado para iterar sobre os valores de coleções iteráveis, enquanto o último é usado para iterar sobre as chaves e propriedades de objetos. Certifique-se de escolher o que melhor atende às suas necessidades, dependendo do tipo de estrutura de dados com a qual está trabalhando.
 
 - Este é um exemplo simples que exibe o nome do dia da semana com base no número fornecido.
 
