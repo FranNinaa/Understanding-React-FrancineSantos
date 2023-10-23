@@ -2123,3 +2123,226 @@ console.log(texto.indexOf('JavaScript'));  // Saída: 11
 </html>
 ```
 ## Estes são apenas alguns exemplos de operações com strings em JavaScript. Strings são uma parte fundamental da linguagem e são amplamente utilizadas para manipulação de texto em programas.
+<br>
+
+# Let, Var e Const em JavaScript
+
+Em JavaScript, `let`, `var`, e `const` são palavras-chave usadas para declarar variáveis. Cada uma delas tem um comportamento ligeiramente diferente. Neste README, vamos explorar as diferenças entre elas.
+
+## var
+
+- A declaração `var` era a única maneira de declarar variáveis em JavaScript antes do ECMAScript 6 (ES6).
+
+- Variáveis declaradas com `var` têm escopo de função. Isso significa que a variável é visível em toda a função em que foi declarada.
+
+- As variáveis declaradas com `var` são içadas (hoisted) no topo da função ou escopo.
+
+- `var` permite a redeclaração da mesma variável no mesmo escopo.
+
+- É considerada obsoleta em favor de `let` e `const` devido a problemas de escopo e hoisting.
+
+## let
+
+- A declaração `let` foi introduzida no ECMAScript 6 (ES6).
+
+- Variáveis declaradas com `let` têm escopo de bloco. Isso significa que a variável é visível apenas dentro do bloco em que foi declarada.
+
+- Variáveis `let` não são içadas, o que significa que elas não são elevadas para o topo do escopo.
+
+- Não é possível redeclarar a mesma variável no mesmo escopo usando `let`.
+
+## const
+
+- A declaração `const` também foi introduzida no ECMAScript 6 (ES6).
+
+- Variáveis declaradas com `const` têm escopo de bloco, assim como `let`.
+
+- No entanto, uma vez que uma variável é declarada com `const`, ela não pode ser reatribuída. Isso a torna ideal para declarar constantes.
+
+- Variáveis declaradas com `const` também não são içadas.
+
+## Exemplo de Uso:
+
+```javascript
+// Declarando variáveis com var
+var a = 10;
+var a = 20;  // Reatribuição permitida
+
+// Declarando variáveis com let
+let b = 30;
+// let b = 40;  // Gera um erro, redeclaração não permitida
+
+// Declarando constantes com const
+const c = 50;
+// c = 60;  // Gera um erro, reatribuição não permitida
+```
+## Exemplo feito em aula
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //No JS existem 3 Escopos : Global, Funcional, Local/Bloco {}
+        //No JS existem 4 Formas de declarar váriaáveis: var, let, const e "sem palavra reservada alguma"
+        
+        /*-----  Declarando variáveis sem palavra reservada -----
+        ---------------------------------------------------------*/
+        texto1 = "Texto" //Escopo Global (só dá para declarar no escopo global)
+        console.log("Log 1:" + texto1);
+
+
+        /*----- Declarando Variáveis com var --------------------
+        ---------------------------------------------------------*/
+        var nome = "Joao" //Escopo Global, Funcional
+        var nome = "Igor" //Dá para "redeclarar" no mesmo escopo (isso é um problema!!!)
+        console.log("Log 2:" + nome);
+
+
+        //Entendendo melhor o problema de var...
+        var msn = "Olá Mundo!!!"
+
+        var isMasculino = true 
+
+        if (isMasculino) {
+            var msn = 2 * 3 
+        }
+
+        console.log("Log 3: msn:" + msn);
+
+        /*               Hoisting de var (elevação)
+                        -------------------------
+            Hoisting é um mecanismo do JavaScript que faz com que as
+            declarações de variáveis e de funções sejam movidas para 
+            o topo de seu escopo antes da execução do código. 
+        */
+        testeHoisting = "12345667"
+        console.log("Log 4: " + testeHoisting);
+        var testeHoisting = "Teste Hoisting"
+
+       /* A interpretação será:
+       var testeHoisting
+       console.log(testeHoisting); //testeHoisting será undefined
+       testeHoisting = "Teste Hoisting"
+       */
+       var testeHoisting3 = "125234523452"
+
+       testeEscopoVar()
+        function testeEscopoVar() {
+            console.log("log 5:" + testeHoisting3); //Perceba que a variável teste 
+            //não respeitou o escopo do if!!!  
+            if (false) {
+                var testeHoisting3 = "wewewe"
+            }
+            
+        }
+
+        console.log("log 6:" + testeHoisting3); //Perceba que a variável teste 
+
+        /*----- Declarando Variáveis com let --------------------
+        ---------------------------------------------------------*/
+       // console.log("log 7" + sobreNome); //vai gerar erro 
+        let sobreNome = "Silva" //ES6 2015 //Let tem escopo de bloco {}
+        //Variáveis Let não podem ser redeclaradas no mesmo escopo
+        //let sobreNome = "teste let" //isso irá gerar um erro de sintaxe
+
+        let testeLetGlobal = "teste let global" //Let tem escopo de bloco {}
+
+        testeEscopoLet()
+   
+        function testeEscopoLet() {
+            console.log("Log 7:" + testeLetGlobal); 
+            
+            //Variaveis Let não sofrem Hoisting - A linha abaixo irá gerar erro 
+            //console.log(testeLetLocal); 
+            let testeLetLocal = "teste let local" 
+            console.log("Log 8:"+ testeLetLocal);
+            
+            let testeLetLocal2 = "teste let local 2"
+            console.log("Log 9:" + testeLetLocal2);
+
+
+            if (true) {
+                let testeLetLocal2 = 123
+                console.log("Log 10:" +  testeLetLocal2);
+            }
+        }
+
+        /*----- Declarando Variáveis com const --------------------
+        ---------------------------------------------------------*/
+        /*
+            - "Variáveis" const não podem ser reatribuidas 
+            - Tirando a regra acima, as mesmas regras de variáveis Let se 
+              aplicam a const.
+        */
+        const PI = 3.14 //ES6 2015 
+
+        //Const com array e objetos 
+        /*
+            Os elementos de um Array podem ser reatribuídos assim como os
+            atributos de um objeto podem ter seus valores reatribuidos, contúdo, 
+            não se pode reatríbuir a refêrencia do array ou objeto. 
+        */
+        const x = [1, 2, 3]
+
+        //x = [3,4,5,6]
+
+        x.push(4)
+        x[4] = 8
+        console.log(x);
+
+        const aviador = {
+            nome: "Santos Dumont", 
+            aeronave: "14 Bis", 
+            data: "23 de outubro de 1906"
+        }
+
+        //aviador = {nome: "xpto"}
+
+        aviador.nome = "Albero Santos Dumont"
+        console.log(aviador);
+
+        /*----- Parâmentros de funcões  --------------------------
+        ---------------------------------------------------------*/
+        /*Parâmetros de funções tem escopo local e não sofrem Hoisting.
+        Teoricamente os parâmetros das funções servem para passar valores ou 
+        refêrencias de objetos para a função através da chamada dessa função,
+        contúdo, é possível também atribuir valor aos parâmetros da função de 
+        dentro da função, isso será útil para construção de funções de callback...
+        */
+        testeParamtros("valor1")
+        function testeParamtros(params) {
+            console.log(params);
+            params = "valor2"
+            console.log(params);
+    
+        }
+
+        /*----- Um pouco mais...        --------------------------
+        ---------------------------------------------------------*/
+        console.log("antes do for " + index);
+        //var index = 5
+        for (var index = 5;index < 10; index++) {
+            console.log("dentro do For " + index);
+        }
+        console.log("depois do for " + index);
+
+
+
+        //var testeEscopoX = true
+        //while (testeEscopoX != false) {
+        while(testeEscopoX != false){
+            console.log("Passou pelo while...");
+            var testeEscopoX = false
+            //let testeEscopoX = false
+        }
+
+    </script>
+</body>
+</html>
+```
