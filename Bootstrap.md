@@ -10,11 +10,11 @@ O Bootstrap é um conjunto de recursos de HTML, CSS e JavaScript pré-projetados
 
 **2. Componentes Prontos para Uso:** O Bootstrap oferece uma ampla gama de componentes prontos para uso, como botões, formulários, navegação, alertas e muito mais. Isso economiza tempo e esforço no desenvolvimento.
 
-Personalização: Embora o Bootstrap forneça estilos e componentes prontos, ele também permite personalização. Os desenvolvedores podem ajustar as configurações para corresponder à identidade visual de seu projeto.
+**3.Personalização:** Embora o Bootstrap forneça estilos e componentes prontos, ele também permite personalização. Os desenvolvedores podem ajustar as configurações para corresponder à identidade visual de seu projeto.
 
-**3.JavaScript Interativo:** O Bootstrap inclui bibliotecas JavaScript para adicionar interatividade a elementos da página, como modais, carrosséis e abas.
+**4.JavaScript Interativo:** O Bootstrap inclui bibliotecas JavaScript para adicionar interatividade a elementos da página, como modais, carrosséis e abas.
 
-**4. Suporte a Navegadores:** O Bootstrap é compatível com a maioria dos navegadores modernos, garantindo que os sites e aplicativos sejam acessíveis a um amplo público.
+**5. Suporte a Navegadores:** O Bootstrap é compatível com a maioria dos navegadores modernos, garantindo que os sites e aplicativos sejam acessíveis a um amplo público.
 
 ### Exemplos de Código<br>
 **1. Grade Responsiva**
@@ -172,3 +172,5 @@ Em resumo, o Bootstrap é uma ferramenta poderosa para o desenvolvimento front-e
 
 </html>
 ```
+
+![imagem exemplo bootstrap](https://blog.mastertech.com.br/wp-content/uploads/2017/10/bootstrap.png)
