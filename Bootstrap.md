@@ -173,4 +173,6 @@ Em resumo, o Bootstrap é uma ferramenta poderosa para o desenvolvimento front-e
 </html>
 ```
 
+## Imagem abaixo é só um exemplo de tema que pode esta fazendo com Bootstrap
+
 ![imagem exemplo bootstrap](https://blog.mastertech.com.br/wp-content/uploads/2017/10/bootstrap.png)
