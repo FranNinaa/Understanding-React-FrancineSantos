@@ -2346,3 +2346,506 @@ const c = 50;
 </body>
 </html>
 ```
+
+# Processamento Assíncrono em JavaScript
+
+O objetivo é fornecer uma visão geral do processamento assíncrono em JavaScript, destacando conceitos fundamentais, uso de funções de temporização, AJAX, await, chamada de API, manipulação de dados em JSON e XML. O JavaScript é uma linguagem de programação amplamente usada na web e, para criar aplicações web eficazes, é essencial compreender como o processamento assíncrono funciona.
+
+### Processamento Assíncrono em JavaScript
+O JavaScript é uma linguagem de programação baseada em eventos e, como tal, é especialmente adequada para o processamento assíncrono. Isso significa que as operações não bloqueiam a execução do programa, permitindo que outras tarefas sejam executadas simultaneamente.
+
+### Funções de Temporização
+As funções de temporização, como **setTimeout** e **setInterval**, são comuns no JavaScript e permitem a execução de código após um determinado período de tempo. Isso é útil para adicionar atrasos ou criar animações em uma página da web.
+
+Exemplo:
+
+```js
+setTimeout(() => {
+  console.log("Esta mensagem aparecerá após 2 segundos.");
+}, 2000);
+
+```
+
+### AJAX (Asynchronous JavaScript and XML)
+O AJAX é uma técnica que permite que o JavaScript faça solicitações assíncronas para um servidor web e atualize partes de uma página sem recarregá-la completamente. Isso é amplamente usado para criar aplicativos da web mais responsivos e interativos.
+
+### Exemplo de uma solicitação AJAX usando a biblioteca jQuery:
+
+```JS
+$.ajax({
+  url: "https://api.example.com/data",
+  method: "GET",
+  success: function (data) {
+    console.log("Dados recebidos com sucesso:", data);
+  },
+  error: function (error) {
+    console.error("Ocorreu um erro:", error);
+  }
+});
+```
+
+### await e async
+A palavra-chave **await** é usada em funções assíncronas (marcadas com async) para pausar a execução até que uma promessa seja resolvida. Isso é útil para lidar com operações assíncronas de forma mais síncrona e legível.
+
+### Exemplo de uso de async e await em uma função assíncrona:
+
+```JS
+async function fetchData() {
+  try {
+    const response = await fetch("https://api.example.com/data");
+    const data = await response.json();
+    console.log("Dados recebidos com sucesso:", data);
+  } catch (error) {
+    console.error("Ocorreu um erro:", error);
+  }
+}
+
+```
+
+### fetchData();
+Chamada de API e Manipulação de Dados
+Chamar uma API é um caso comum de uso do processamento assíncrono em JavaScript. As APIs podem retornar dados em diferentes formatos, como JSON e XML.
+
+### Exemplo de chamada de API com JSON:
+
+```JS
+fetch("https://api.example.com/data")
+  .then((response) => response.json())
+  .then((data) => {
+    console.log("Dados recebidos com sucesso:", data);
+  })
+  .catch((error) => {
+    console.error("Ocorreu um erro:", error);
+  });
+```
+
+### Exemplo de manipulação de dados em JSON:
+
+```JS
+const jsonData = '{"name": "John", "age": 30}';
+const parsedData = JSON.parse(jsonData);
+console.log("Nome:", parsedData.name);
+console.log("Idade:", parsedData.age);
+```
+
+### Exemplo de chamada de API com XML usando XMLHttpRequest:
+
+```JS
+const xhr = new XMLHttpRequest();
+xhr.open("GET", "https://api.example.com/data.xml", true);
+
+xhr.onreadystatechange = function () {
+  if (xhr.readyState === 4 && xhr.status === 200) {
+    const xmlDoc = xhr.responseXML;
+    console.log("Dados recebidos com sucesso:", xmlDoc);
+  }
+};
+```
+
+
+### xhr.send();
+
+
+O processamento assíncrono é uma parte fundamental do JavaScript moderno e é essencial para criar aplicativos da web interativos e responsivos. Compreender os conceitos de funções de temporização, AJAX, await, chamada de API e manipulação de dados em JSON e XML permite que os desenvolvedores construam aplicativos mais eficazes e eficientes.
+
+## Exemplos feito em aula
+
+### Timing
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="clearInterval(intId)">Para Timmer</button>
+    <button onclick="tarefaQualquer()">Executar Tarefa Teste</button>
+    <script>
+
+       //Executar uma taréfa repetidamente em intervalos regulares 
+        var cont = 0 
+        var intId = setInterval(contar, 1000)
+
+        function contar() {
+            console.log(++cont);
+        }
+
+        function tarefaQualquer(){
+            for (let index = 0; index < 100; index++) {
+                console.log("Tarefa: " + index);
+                
+            }
+        }
+
+        //
+        console.log("Primeira Ação");
+        setTimeout(function(){
+                console.log("Segunda Ação");
+        }, 2000)
+        console.log("Terceira Ação");
+
+    </script>
+</body>
+</html>
+```
+### Ideias Base
+
+```HTML
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //Assíncrono 
+        //Single Thread 
+        //IO Não Bloqueante 
+
+        console.log("Primeira Ação");
+
+        setTimeout(function () {
+            console.log("Segunda Ação");
+        }, 2000)
+
+
+        console.log("Terceira Ação");
+
+        setTimeout(function () {
+            console.log("Quarta Ação");
+        }, 2000)
+
+        console.log("Quinta Ação");
+
+    </script>
+</body>
+
+</html>
+```
+
+### Buscar API com AJAX
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <input type="text" id="idCep" placeholder="CEP...">
+        <input type="button" value="Buscar CEP" id="idBtBuscarCep">
+
+    </div>
+    <script>
+        //Assíncrono 
+        //Single Thread 
+        //IO Não Bloqueante 
+        var btBuscarCep = document.getElementById("idBtBuscarCep")
+
+        btBuscarCep.onclick = function () {
+            buscarCEP(document.getElementById("idCep").value)
+        }
+
+    
+        //API - Application Programing Interface
+        //Endpoint - Endereço dentro do servidor 
+        //Latência - Tempo que o servidor leva para responder
+        function buscarCEP(cep){
+            //AJAX - Fazer uma requisição HTTPs / Consumo de API
+            var xhr = new XMLHttpRequest()
+
+            xhr.open("GET", "https://viacep.com.br/ws/" + cep + "/json/" )
+           
+            
+            xhr.addEventListener("load", function(){
+                let resposta = xhr.responseText
+                imprimirEndereco(resposta)
+            })
+            
+            xhr.send()
+
+        }
+
+
+        function imprimirEndereco(enderecoJSON){
+            console.log(enderecoJSON)
+
+            let enderecoOBJ = JSON.parse(enderecoJSON) //Convertendo um JSON para JSObject
+
+            console.log(enderecoOBJ);
+
+            console.log("Logradouro " + enderecoOBJ.logradouro);
+
+            let endJSON =  JSON.stringify(enderecoOBJ) //Convertendo um JSObject para JSON
+
+            console.log(endJSON);
+      
+        }
+
+
+    </script>
+</body>
+
+</html>
+```
+
+### Buscar API await
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <input type="text" id="idCep" placeholder="CEP...">
+        <input type="button" value="Buscar CEP" id="idBtBuscarCep">
+    </div>
+
+    <script>
+        //Assíncrono 
+        //Single Thread 
+        //IO Não Bloqueante 
+        
+        var btBuscarCep = document.getElementById("idBtBuscarCep")
+        
+        btBuscarCep.onclick =  async function () {
+            let endereco = await buscarCEP(document.getElementById("idCep").value)
+            console.log(endereco);
+        }
+        
+        async function buscarCEP(cep){
+            
+            var resposta = await fetch("https://viacep.com.br/ws/" + cep + "/json/")
+            
+            return resposta.json()
+           
+        }
+        
+   
+
+    </script>
+    
+</body>
+</html>
+```
+
+### Chamada API de moedas
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <select name="" id="idMoedas">
+        <option value="BRL">Real</option>
+    </select>
+
+    <script>
+
+
+
+        //AJAX
+        function buscarMoedasAJAX() {
+            //AJAX - Fazer uma requisição HTTPs / Consumo de API
+            var xhr = new XMLHttpRequest()
+
+            xhr.open("GET", "https://olinda.bcb.gov.br/olinda/servico/PTAX/versao/v1/odata/Moedas?$top=100&$format=json&$select=simbolo,nomeFormatado,tipoMoeda")
+
+
+            xhr.addEventListener("load", function () {
+                let resposta = xhr.responseText
+                let moedas = JSON.parse(resposta)
+                //console.log(lMoedas);
+                carregarSelectMoedas(moedas)
+
+            })
+
+            xhr.send()
+
+        }
+
+        //Fetch
+        (async function () {
+            let moedas = await buscarMoedasFETCH()
+            console.log(moedas);
+            carregarSelectMoedas(moedas)
+        })()
+
+        
+        async function buscarMoedasFETCH() {
+
+            var resposta = await fetch("https://olinda.bcb.gov.br/olinda/servico/PTAX/versao/v1/odata/Moedas?$top=100&$format=json&$select=simbolo,nomeFormatado,tipoMoeda")
+
+            return resposta.json();
+
+        }
+
+
+
+        function carregarSelectMoedas(moedas) {
+            //carregando as moedas no select da tela... 
+            let listaMoedas = document.getElementById("idMoedas")
+            for (let i = 0; i < moedas.value.length; i++) {
+                console.log(moedas.value[i].simbolo)
+
+                let optionMoeda = document.createElement("option")
+                optionMoeda.value = moedas.value[i].simbolo
+                optionMoeda.innerText = moedas.value[i].nomeFormatado
+
+                listaMoedas.appendChild(optionMoeda)
+            }
+        }
+
+
+    </script>
+
+</body>
+
+</html>
+```
+
+### JS OBJ - JASON - XML
+
+#### JSON
+```json
+
+{
+    "cep": "88372-744",
+    "logradouro": "Rua Raimundo Mafra",
+    "complemento": "",
+    "bairro": "Gravatá",
+    "localidade": "Navegantes",
+    "uf": "SC",
+    "ibge": "4211306",
+    "gia": "",
+    "ddd": "47",
+    "siafi": "8221", 
+    "cont": 1
+  }
+```
+#### XML
+
+```xml
+<endereco>
+    <rua>Rua das Palmeiras</rua>
+    <cidade>Blumenau</cidade>
+    <num>123</num>
+</endereco>
+```
+
+# Stored JS
+
+Em JavaScript, o termo "stored" não é um conceito nativo ou amplamente reconhecido na linguagem. Pode ser uma referência a uma variável, função ou objeto que armazena dados ou realiza alguma ação específica no código JavaScript. Vou fornecer informações sobre algumas estruturas de dados e conceitos relacionados ao armazenamento de dados em JavaScript:
+
+### Variáveis
+ As variáveis são usadas para armazenar valores em JavaScript. Elas podem ser declaradas com as palavras-chave var, let ou const, e podem conter diversos tipos de dados, como números, strings, objetos e funções.
+
+### Exemplo:
+
+```JS
+var nome = "Alice";  // Variável que armazena uma string
+var idade = 30;     // Variável que armazena um número
+```
+
+### Arrays
+Arrays são usados para armazenar uma coleção ordenada de valores em JavaScript. Eles são acessados por índices numéricos e podem conter diferentes tipos de dados.
+
+### Exemplo:
+
+```Js
+var frutas = ["maçã", "banana", "laranja"];
+```
+
+### Objetos
+ Objetos são estruturas de dados que armazenam pares de chave-valor. Eles são usados para representar informações estruturadas.
+
+### Exemplo:
+
+```JS
+var pessoa = {
+  nome: "João",
+  idade: 25,
+  cidade: "São Paulo"
+};
+```
+
+### Funções
+
+ Funções podem ser usadas para armazenar blocos de código reutilizável. Elas podem receber argumentos, executar ações e retornar valores.
+
+### Exemplo:
+
+```JS
+function soma(a, b) {
+  return a + b;
+}
+```
+
+### Exemplo feito em Aula
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+      
+        */
+
+        const inventor = {
+            nome: "Alberto Santos Dummont", 
+            inventos: ["Balão a hélio", "Dirigivel", "Avião"],
+            nacionalidade: "Brasileiro" 
+        } 
+        const inventorJSON = JSON.stringify(inventor)
+
+        //Criando um novo registro
+        localStorage.setItem("inventor", inventorJSON)
+
+        //Lendo um registro 
+        const engenheiro = localStorage.getItem("inventor")
+        const JSONToInventor = JSON.parse(engenheiro)
+
+        console.log(JSONToInventor);
+
+        JSONToInventor.inventos.push("14-Bis")
+
+        //Atualizando um registro 
+        localStorage.setItem("inventor", JSONToInventor)
+
+        //Excluindo um registro
+        //localStorage.removeItem("inventor")
+
+    </script>
+</body>
+</html>
+```
+
